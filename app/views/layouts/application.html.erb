@@ -7,11 +7,16 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
   </head>
 
   <body>
     <h1><%= link_to "Progress", root_path %></h1>
-    <section>
+    <nav>
       <ul>
         <li>メニュー</li>
         <li><%= link_to "概要", about_path %></li>
@@ -19,7 +24,7 @@
         <li><%= link_to "アーカイブ", "#" %></li>
         <li><%= link_to "投稿一覧", "#" %></li>
       </ul>
-    </section>
+    </nav>
     <%= yield %>
   </body>
 </html>
