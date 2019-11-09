@@ -1,15 +1,52 @@
-version: '3'
+version: '2'
 services:
   db:
     image: postgres
-    volumes:
-      - ./tmp/db:/var/lib/postgresql/data
+    volumes_from:
+      - datastore
+    expose:
+      - '5432'
+
+  elasticsearch:
+    image: elasticsearch:latest
+    volumes_from:
+      - datastore
+    ports:
+      - '9200:9200'
+
+  redis:
+    image: redis:latest
+    ports:
+      - '6379:6379'
+    volumes_from:
+      - datastore
+
+  memcached:
+    image: memcached:latest
+    ports:
+      - '11211:11211'
+    volumes_from:
+      - datastore
+
+  datastore:
+    build: docker/datastore
+
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
-      - .:/myapp
+      - web-sync:/var/www:rw
+      - /var/www/client/node_modules
     ports:
       - "3000:3000"
-    depends_on:
+      - '8080:8080'
+    links:
       - db
+      - elasticsearch
+      - redis
+      - memcached
+
+# docker-syncで使用するvolume ここで宣言した名前がdocker-sync.ymlで使用される
+volumes:
+  web-sync:
+    external: true
