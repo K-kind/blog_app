@@ -15,17 +15,28 @@
   </head>
 
   <body>
-    <h1><%= link_to "Progress", root_path %></h1>
-    <nav>
-      <ul>
-        <li>メニュー</li>
-        <li><%= link_to "概要", about_path %></li>
-        <li><%= link_to "カテゴリー", "#" %></li>
-        <li><%= link_to "アーカイブ", "#" %></li>
-        <li><%= link_to "投稿一覧", "#" %></li>
-      </ul>
-    </nav>
-    <%= yield %>
-    <%= debug(params) if Rails.env.development? %>
+    <header class="navbar navbar-default">
+      <div class="container">
+        <nav class="nav navbar-nav navbar-left">
+          <h1><%= link_to "Progress", root_path %></h1>
+        </nav>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li>メニュー</li>
+            <li><%= link_to "概要", about_path %></li>
+            <li><%= link_to "カテゴリー", "#" %></li>
+            <li><%= link_to "アーカイブ", "#" %></li>
+            <li><%= link_to "投稿一覧", "#" %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
+      <%= yield %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
   </body>
 </html>
