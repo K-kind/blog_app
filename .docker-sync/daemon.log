@@ -1624,3 +1624,173 @@ unison: started
 [2019-11-11 13:08:50 +0900] Sync Log:  [END] Updating file db/mysql_data/ibdata1
 [2019-11-11 13:08:50 +0900] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 13:08:49.91 on 11 Nov 2019
 [2019-11-11 13:08:50 +0900] Sync Log:  Synchronization complete at 13:08:49  (1 item transferred, 0 skipped, 0 failed)
+[2019-11-11 13:09:10 +0900] Sync Log:  Synchronization complete at 13:09:09  (0 item transferred, 1 skipped, 0 failed)
+[2019-11-11 13:09:10 +0900] Sync Log:    skipped: .git/index.lock (Error in digesting /host_sync/.git/index.lock:
+[2019-11-11 13:09:10 +0900] Sync Log:  /host_sync/.git/index.lock: No such file or directory)
+[2019-11-11 13:09:12 +0900] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 13:09:12.08 on 11 Nov 2019
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Updating file .git/index from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Updating file .git/index
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/08/57593f06d5484139ee3157a959149c74dbe994 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/08/57593f06d5484139ee3157a959149c74dbe994
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/08/838ccdb20760836aa41554060426065276a773 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/08/838ccdb20760836aa41554060426065276a773
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/0d/d9358e1d9ee927fe4c3532635b103a9168ca49 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/0d/d9358e1d9ee927fe4c3532635b103a9168ca49
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/0f/5a80334394ab4a336b829f79c7ea96b7d6d97b from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/0f/5a80334394ab4a336b829f79c7ea96b7d6d97b
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/11/3fa41d4bd838be0caf7856c505e78859755958 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/11/3fa41d4bd838be0caf7856c505e78859755958
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/11/d7f6f5838bd305f1a36b0708b13f0d8ffc2731 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/11/d7f6f5838bd305f1a36b0708b13f0d8ffc2731
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/12/6d6dff09a9ac9d8706dcdf698cc787ee3b7db2 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/12/6d6dff09a9ac9d8706dcdf698cc787ee3b7db2
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/15 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/15
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/21 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/21
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/2c from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/2c
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/2f/571807330925b1f9168150fb5ccf291fb6aed5 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/2f/571807330925b1f9168150fb5ccf291fb6aed5
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/3a/a73ba6c1d05c1a6ffe4c05cbf4d9ff8dcae041 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/3a/a73ba6c1d05c1a6ffe4c05cbf4d9ff8dcae041
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/3c/bd51a6d8f6daa96bf994a4c37809d94b78eaef from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/3c/bd51a6d8f6daa96bf994a4c37809d94b78eaef
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/44/6b15c9c0dce2800d5198a1d0006b5cfcafef19 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/44/6b15c9c0dce2800d5198a1d0006b5cfcafef19
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/50/c3d8c4c7c7d2c749d56e8ea6247f987b56bb3b from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/50/c3d8c4c7c7d2c749d56e8ea6247f987b56bb3b
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/50/f953ff8a5c0fa4467c82f78040d0d99bc117c1 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/50/f953ff8a5c0fa4467c82f78040d0d99bc117c1
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/52/64ad7071155ddf084a33913c18e046762dadb8 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/52/64ad7071155ddf084a33913c18e046762dadb8
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/5e/c2e53b86b83bf5ab442b22901b849d7db2b85b from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/5e/c2e53b86b83bf5ab442b22901b849d7db2b85b
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/64/7211d963ca9b2713504ca1e5cf0fafc3d86ecc from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/64/7211d963ca9b2713504ca1e5cf0fafc3d86ecc
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/66/dbb4da9866ebb0c5d28413a9ffdaaff777db64 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/66/dbb4da9866ebb0c5d28413a9ffdaaff777db64
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/6f/166d476b4efaa41ae9d15fa518a67a9d094e5b from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/6f/166d476b4efaa41ae9d15fa518a67a9d094e5b
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/81 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/81
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/86 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/86
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/8a from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/8a
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/92/224ae769150baf4637ee38e483870c4ffbbba9 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/92/224ae769150baf4637ee38e483870c4ffbbba9
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/92/97b8bcf8ccaf5f0aa70609edd8670e37304218 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/92/97b8bcf8ccaf5f0aa70609edd8670e37304218
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/95 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/95
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/9d/9ddcfb8bd465d8f711c8aba8515672b183f3f3 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/9d/9ddcfb8bd465d8f711c8aba8515672b183f3f3
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/9f/b6f65a3a8c3d91bffcd823e742c3ea0b42bddc from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/9f/b6f65a3a8c3d91bffcd823e742c3ea0b42bddc
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/b0/aa8df6bcdf81eb026004851dba008e92a5989f from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/b0/aa8df6bcdf81eb026004851dba008e92a5989f
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/b8 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/b8
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/bd/766bfdc65fbf1f542c2e0c688e29a22bd76bfc from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/bd/766bfdc65fbf1f542c2e0c688e29a22bd76bfc
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/c8/0e44fcedc7d099d21419eafac68dda742369c0 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/c8/0e44fcedc7d099d21419eafac68dda742369c0
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/c8/1a8bca7ec73a181ff843862a74a71ff151bd94 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/c8/1a8bca7ec73a181ff843862a74a71ff151bd94
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/cd/0f3c9610960913b6288f72c5b763e380b407c0 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/cd/0f3c9610960913b6288f72c5b763e380b407c0
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/ce from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/ce
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/d8/bd6d02cfc090052ab7e9bbe1ce640caeac7ecb from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/d8/bd6d02cfc090052ab7e9bbe1ce640caeac7ecb
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/db/85c087d7154154fade39bc9628ff9a3e9e6fe7 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/db/85c087d7154154fade39bc9628ff9a3e9e6fe7
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/dc/5f89dbe619f33d80835ad6250baa7552551342 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/dc/5f89dbe619f33d80835ad6250baa7552551342
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/de/e0e28db8442624583aa4f068809a452a042628 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/de/e0e28db8442624583aa4f068809a452a042628
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/e2/9c63977dd20c4b7cd894c03834dcc3e3d896e8 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/e2/9c63977dd20c4b7cd894c03834dcc3e3d896e8
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/e4/7f7a0257a1fb79a399a03081ea47ff5a7ccf8d from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/e4/7f7a0257a1fb79a399a03081ea47ff5a7ccf8d
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/ed/05d3c4fdcf21077eb99905684a1a593b6c5269 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/ed/05d3c4fdcf21077eb99905684a1a593b6c5269
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/fa from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/fa
+[2019-11-11 13:09:12 +0900] Sync Log:  [BGN] Copying .git/objects/fb/7e0c7c515ac761154f05e6eb9e854fa98d6b22 from /host_sync to /app_sync
+[2019-11-11 13:09:12 +0900] Sync Log:  [END] Copying .git/objects/fb/7e0c7c515ac761154f05e6eb9e854fa98d6b22
+[2019-11-11 13:09:12 +0900] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 13:09:12.37 on 11 Nov 2019
+[2019-11-11 13:09:12 +0900] Sync Log:  Synchronization complete at 13:09:12  (46 items transferred, 0 skipped, 0 failed)
+[2019-11-11 13:09:40 +0900] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 13:09:40.04 on 11 Nov 2019
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Updating file .git/COMMIT_EDITMSG from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Updating file .git/COMMIT_EDITMSG
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Updating file .git/index from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Updating file .git/index
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Updating file .git/logs/HEAD from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Updating file .git/logs/HEAD
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Updating file .git/logs/refs/heads/updating-users from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Updating file .git/logs/refs/heads/updating-users
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/01/2e121f42034f0dfc9f06606419eade2a1cc1af from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/01/2e121f42034f0dfc9f06606419eade2a1cc1af
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/07/72cdd4aafa08dbedf9b4f263a633e40279de4d from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/07/72cdd4aafa08dbedf9b4f263a633e40279de4d
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/21/62f4d3011f781304c05e900eb4fec6e6cad5c0 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/21/62f4d3011f781304c05e900eb4fec6e6cad5c0
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/43/8befba60e9f74930cdcaee7a12f34ad1c9534e from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/43/8befba60e9f74930cdcaee7a12f34ad1c9534e
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/44/89234e76b597c3a1574469a9b96d1899a4cdea from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/44/89234e76b597c3a1574469a9b96d1899a4cdea
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/49/fe0b3adf488f8955f36ed7e1a7552d81bd0a2e from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/49/fe0b3adf488f8955f36ed7e1a7552d81bd0a2e
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/4b/418c6ae4b8e923fc1db86a8510945762724d18 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/4b/418c6ae4b8e923fc1db86a8510945762724d18
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/50/33216ceb29a8a59f577000326a172b28c92e35 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/50/33216ceb29a8a59f577000326a172b28c92e35
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/53/e29e3e290e54f61ebebaf3f25df16496b2b7e3 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/53/e29e3e290e54f61ebebaf3f25df16496b2b7e3
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/57 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/57
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/5a/524f25b82179253f3d4e7523916e9aaeb1295f from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/5a/524f25b82179253f3d4e7523916e9aaeb1295f
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/65/150f722e05237eb6ed0694d935db5d7a9c2bf7 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/65/150f722e05237eb6ed0694d935db5d7a9c2bf7
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/6b/882ebe79ab67f171e6e2ea5e1321b9da33cf7f from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/6b/882ebe79ab67f171e6e2ea5e1321b9da33cf7f
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/71/4cd7d690fd52d208d9488f31b4236aae170a98 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/71/4cd7d690fd52d208d9488f31b4236aae170a98
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/71/781a082288ec5cb056732de54c6e03e6549f9e from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/71/781a082288ec5cb056732de54c6e03e6549f9e
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/77/d48bf64434bf78245650cbc0bccb54c6718516 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/77/d48bf64434bf78245650cbc0bccb54c6718516
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/77/ee3a38ed697dcb4e5d5c6da5f778a025348a79 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/77/ee3a38ed697dcb4e5d5c6da5f778a025348a79
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/8e/99a84cb4b65b886cee14290522f5e595e4a9c2 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/8e/99a84cb4b65b886cee14290522f5e595e4a9c2
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/94/90210b50d52b2c830155c22b320cd0c6370e30 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/94/90210b50d52b2c830155c22b320cd0c6370e30
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/95/a49dec2822ad080d9b1200222b3f1279526b45 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/95/a49dec2822ad080d9b1200222b3f1279526b45
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/af/6932e6a1c119d7e2d4e676a4bdf4effffad363 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/af/6932e6a1c119d7e2d4e676a4bdf4effffad363
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/d9/24437d5c5d9ec23e50f08c384816e770ff7767 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/d9/24437d5c5d9ec23e50f08c384816e770ff7767
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/db/13bf851ba9857b817b6de4986c9de4f6cdf267 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/db/13bf851ba9857b817b6de4986c9de4f6cdf267
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/db/6abbc9d3b60c1947d4d36a775d54b0c2fae7f0 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/db/6abbc9d3b60c1947d4d36a775d54b0c2fae7f0
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/db/b0dfa17bd3c42a2e11480a5506df830bd11263 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/db/b0dfa17bd3c42a2e11480a5506df830bd11263
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/df/a87d8af3e7f0024942810ff2d3d137f0f09ca8 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/df/a87d8af3e7f0024942810ff2d3d137f0f09ca8
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Copying .git/objects/ec/85957a2b3040e48580018bc62b6b4ebe686f81 from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Copying .git/objects/ec/85957a2b3040e48580018bc62b6b4ebe686f81
+[2019-11-11 13:09:40 +0900] Sync Log:  [BGN] Updating file .git/refs/heads/updating-users from /host_sync to /app_sync
+[2019-11-11 13:09:40 +0900] Sync Log:  [END] Updating file .git/refs/heads/updating-users
+[2019-11-11 13:09:40 +0900] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 13:09:40.14 on 11 Nov 2019
+[2019-11-11 13:09:40 +0900] Sync Log:  Synchronization complete at 13:09:40  (32 items transferred, 0 skipped, 0 failed)
+[2019-11-11 13:15:36 +0900] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 13:15:36.11 on 11 Nov 2019
+[2019-11-11 13:15:36 +0900] Sync Log:  [BGN] Updating file .gitignore from /host_sync to /app_sync
+[2019-11-11 13:15:36 +0900] Sync Log:  [END] Updating file .gitignore
+[2019-11-11 13:15:36 +0900] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 13:15:36.12 on 11 Nov 2019
+[2019-11-11 13:15:36 +0900] Sync Log:  Synchronization complete at 13:15:36  (1 item transferred, 0 skipped, 0 failed)

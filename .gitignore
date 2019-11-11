@@ -12,6 +12,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/.docker-sync/daemon.log
 
 # Ignore uploaded files in development.
 /storage/*
