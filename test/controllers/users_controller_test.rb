@@ -69,4 +69,10 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     end
     assert_redirected_to root_url
   end
+
+  test "not-activated user show should be redirected" do
+    log_in_as @user
+    get user_path(users(:not_activated))
+    assert_redirected_to root_url
+  end
 end
