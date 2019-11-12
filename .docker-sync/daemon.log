@@ -1794,3 +1794,482 @@ unison: started
 [2019-11-11 13:15:36 +0900] Sync Log:  [END] Updating file .gitignore
 [2019-11-11 13:15:36 +0900] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 13:15:36.12 on 11 Nov 2019
 [2019-11-11 13:15:36 +0900] Sync Log:  Synchronization complete at 13:15:36  (1 item transferred, 0 skipped, 0 failed)
+          ok  Starting native_osx for sync sync-volume
+          ok  sync-volume container still running, restarting unison in container
+unison: stopped
+unison: ERROR (spawn error)
+     success  Sync container started
+     success  Showing unison logs from your sync container: sync-volume
+[2019-11-12 14:39:56 +0900] Sync Log:  Fatal error: Warning: the archives are locked.  
+[2019-11-12 14:39:56 +0900] Sync Log:  If no other instance of unison is running, the locks should be removed.
+[2019-11-12 14:39:56 +0900] Sync Log:  The file /root/.unison/lk667a1905ff5a9dc5baf5acee407906fb on host 034cf6bccb4d should be deleted
+[2019-11-12 14:39:56 +0900] Sync Log:  The file /root/.unison/lkcda28e78f496c3a9807b4cef741cecf4 on host 034cf6bccb4d should be deleted
+[2019-11-12 14:39:56 +0900] Sync Log:  Please delete lock files as appropriate and try again.
+[2019-11-12 14:39:56 +0900] Sync Log:  Fatal error: Warning: the archives are locked.  
+[2019-11-12 14:39:56 +0900] Sync Log:  If no other instance of unison is running, the locks should be removed.
+[2019-11-12 14:39:56 +0900] Sync Log:  The file /root/.unison/lk667a1905ff5a9dc5baf5acee407906fb on host 034cf6bccb4d should be deleted
+[2019-11-12 14:39:56 +0900] Sync Log:  The file /root/.unison/lkcda28e78f496c3a9807b4cef741cecf4 on host 034cf6bccb4d should be deleted
+[2019-11-12 14:39:56 +0900] Sync Log:  Please delete lock files as appropriate and try again.
+[2019-11-12 14:39:57 +0900] Sync Log:  Fatal error: Warning: the archives are locked.  
+[2019-11-12 14:39:57 +0900] Sync Log:  If no other instance of unison is running, the locks should be removed.
+[2019-11-12 14:39:57 +0900] Sync Log:  The file /root/.unison/lk667a1905ff5a9dc5baf5acee407906fb on host 034cf6bccb4d should be deleted
+[2019-11-12 14:39:57 +0900] Sync Log:  The file /root/.unison/lkcda28e78f496c3a9807b4cef741cecf4 on host 034cf6bccb4d should be deleted
+[2019-11-12 14:39:57 +0900] Sync Log:  Please delete lock files as appropriate and try again.
+[2019-11-12 14:40:00 +0900] Sync Log:  Fatal error: Warning: the archives are locked.  
+[2019-11-12 14:40:00 +0900] Sync Log:  If no other instance of unison is running, the locks should be removed.
+[2019-11-12 14:40:00 +0900] Sync Log:  The file /root/.unison/lk667a1905ff5a9dc5baf5acee407906fb on host 034cf6bccb4d should be deleted
+[2019-11-12 14:40:00 +0900] Sync Log:  The file /root/.unison/lkcda28e78f496c3a9807b4cef741cecf4 on host 034cf6bccb4d should be deleted
+[2019-11-12 14:40:00 +0900] Sync Log:  Please delete lock files as appropriate and try again.
+[2019-11-12 15:06:41 +0900] Sync Log:  Error response from daemon: dial unix docker.raw.sock: connect: connection refused
+          ok  Starting native_osx for sync sync-volume
+          ok  sync-volume container still running, restarting unison in container
+unison: stopped
+unison: started
+     success  Sync container started
+     success  Showing unison logs from your sync container: sync-volume
+[2019-11-12 15:20:01 +0900] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 15:20:01.07 on 12 Nov 2019
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Updating file .docker-sync/daemon.log from /host_sync to /app_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  [END] Updating file .docker-sync/daemon.log
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Updating file .docker-sync/daemon.pid from /host_sync to /app_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  [END] Updating file .docker-sync/daemon.pid
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/5N from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/5N has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/6N from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/6N has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/A1 from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/A1 has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Ca from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/Ca has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/DM from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/DM has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/EL from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/EL has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Ej from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/Ej has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Ew from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/Ew has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/FB from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/FB has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/G9 from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/G9 has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Hq from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/Hq has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/KA from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/KA has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/KL from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/KL has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Ld from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/Ld has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/NQ from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/NQ has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Nv from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/Nv has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Oy from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/Oy has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Pj from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/Pj has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Pp from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/Pp has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Qp from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/Qp has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/RH from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/RH has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/RX from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/RX has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/SZ from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/SZ has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Td from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/Td has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Vb from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/Vb has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Xf from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/Xf has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/ZJ from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/ZJ has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/ao from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/ao has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/b6 from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/b6 has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/bv from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/bv has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/fb from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/fb has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/gW from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/gW has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/hU from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/hU has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/hd from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/hd has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/iS from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/iS has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/ov from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/ov has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/rE from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/rE has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/sN from /app_sync to /host_sync
+[2019-11-12 15:20:01 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:01 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/sN has been created
+[2019-11-12 15:20:01 +0900] Sync Log:  
+[2019-11-12 15:20:01 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/u9 from /app_sync to /host_sync
+[2019-11-12 15:20:02 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:02 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/u9 has been created
+[2019-11-12 15:20:02 +0900] Sync Log:  
+[2019-11-12 15:20:02 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/vb from /app_sync to /host_sync
+[2019-11-12 15:20:02 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:02 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/vb has been created
+[2019-11-12 15:20:02 +0900] Sync Log:  
+[2019-11-12 15:20:02 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/xB from /app_sync to /host_sync
+[2019-11-12 15:20:02 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:02 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/xB has been created
+[2019-11-12 15:20:02 +0900] Sync Log:  
+[2019-11-12 15:20:02 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/yW from /app_sync to /host_sync
+[2019-11-12 15:20:02 +0900] Sync Log:  Failed: Destination updated during synchronization
+[2019-11-12 15:20:02 +0900] Sync Log:  The directory tmp/cache/assets/sprockets/v3.0/yW has been created
+[2019-11-12 15:20:02 +0900] Sync Log:  
+[2019-11-12 15:20:02 +0900] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 15:20:01.80 on 12 Nov 2019
+[2019-11-12 15:20:02 +0900] Sync Log:  Synchronization incomplete at 15:20:01  (2 items transferred, 0 skipped, 42 failed)
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/5N
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/6N
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/A1
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/Ca
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/DM
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/EL
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/Ej
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/Ew
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/FB
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/G9
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/Hq
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/KA
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/KL
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/Ld
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/NQ
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/Nv
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/Oy
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/Pj
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/Pp
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/Qp
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/RH
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/RX
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/SZ
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/Td
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/Vb
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/Xf
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/ZJ
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/ao
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/b6
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/bv
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/fb
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/gW
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/hU
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/hd
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/iS
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/ov
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/rE
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/sN
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/u9
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/vb
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/xB
+[2019-11-12 15:20:02 +0900] Sync Log:    failed: tmp/cache/assets/sprockets/v3.0/yW
+[2019-11-12 15:20:05 +0900] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 15:20:04.77 on 12 Nov 2019
+[2019-11-12 15:20:05 +0900] Sync Log:  [BGN] Updating file tmp/cache/assets/sprockets/v3.0/5N/5NrQSwrBHsAx65g-z_OuvkGuUpLhWcPmAD6snsbCCiU.cache from /host_sync to /app_sync
+[2019-11-12 15:20:05 +0900] Sync Log:  [END] Updating file tmp/cache/assets/sprockets/v3.0/5N/5NrQSwrBHsAx65g-z_OuvkGuUpLhWcPmAD6snsbCCiU.cache
+[2019-11-12 15:20:05 +0900] Sync Log:  [BGN] Updating file tmp/cache/assets/sprockets/v3.0/KL/KLnihxUpwe_21agm6PgffhnyNK_QGAX9WDPvjvQKVJE.cache from /host_sync to /app_sync
+[2019-11-12 15:20:05 +0900] Sync Log:  [END] Updating file tmp/cache/assets/sprockets/v3.0/KL/KLnihxUpwe_21agm6PgffhnyNK_QGAX9WDPvjvQKVJE.cache
+[2019-11-12 15:20:05 +0900] Sync Log:  [BGN] Updating file tmp/cache/assets/sprockets/v3.0/Qp/Qp91EPVYmhcejQWCn4kuOTMUzzyHmGAYOsCYACGMvCQ.cache from /host_sync to /app_sync
+[2019-11-12 15:20:05 +0900] Sync Log:  [END] Updating file tmp/cache/assets/sprockets/v3.0/Qp/Qp91EPVYmhcejQWCn4kuOTMUzzyHmGAYOsCYACGMvCQ.cache
+[2019-11-12 15:20:05 +0900] Sync Log:  [BGN] Updating file tmp/cache/assets/sprockets/v3.0/Vb/Vbahl_u3Ot-zUAtiTd3o04O_GjKKbfTJNf-z8XdnmwY.cache from /host_sync to /app_sync
+[2019-11-12 15:20:05 +0900] Sync Log:  [END] Updating file tmp/cache/assets/sprockets/v3.0/Vb/Vbahl_u3Ot-zUAtiTd3o04O_GjKKbfTJNf-z8XdnmwY.cache
+[2019-11-12 15:20:05 +0900] Sync Log:  [BGN] Updating file tmp/cache/assets/sprockets/v3.0/iS/iS8Ra4YqQMKVnfwwIrKfD9ciVezZIktlBOrWRg71epU.cache from /host_sync to /app_sync
+[2019-11-12 15:20:05 +0900] Sync Log:  [END] Updating file tmp/cache/assets/sprockets/v3.0/iS/iS8Ra4YqQMKVnfwwIrKfD9ciVezZIktlBOrWRg71epU.cache
+[2019-11-12 15:20:05 +0900] Sync Log:  [BGN] Updating file app/views/layouts/application.html.erb from /host_sync to /app_sync
+[2019-11-12 15:20:05 +0900] Sync Log:  [END] Updating file app/views/layouts/application.html.erb
+[2019-11-12 15:20:05 +0900] Sync Log:  [BGN] Updating file db/mysql_data/ib_logfile0 from /host_sync to /app_sync
+[2019-11-12 15:20:05 +0900] Sync Log:  [END] Updating file db/mysql_data/ib_logfile0
+[2019-11-12 15:20:05 +0900] Sync Log:  [BGN] Updating file db/mysql_data/ibdata1 from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Updating file db/mysql_data/ibdata1
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying db/mysql_data/ibtmp1 from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying db/mysql_data/ibtmp1
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Updating file log/development.log from /app_sync to /host_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Updating file log/development.log
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/5N/5n9TDDnfJF0faSHwmcW-atQBwO-EHTUkYyWBFOMgIIw.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/5N/5n9TDDnfJF0faSHwmcW-atQBwO-EHTUkYyWBFOMgIIw.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/6N/6Ny8WEjjPZC9zPOLPywAt-q9QibX-Y_ZPW7EF_9PP-U.cache from /app_sync to /host_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/6N/6Ny8WEjjPZC9zPOLPywAt-q9QibX-Y_ZPW7EF_9PP-U.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/6N/6nYDv3k3KTLcyPKOO99NvGLqGt527h3dR4JNiPo2soM.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/6N/6nYDv3k3KTLcyPKOO99NvGLqGt527h3dR4JNiPo2soM.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/6N/6nv5YUzi5OL6qLkIsUgmhvGzaiolKeDCWFnknMbYFds.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/6N/6nv5YUzi5OL6qLkIsUgmhvGzaiolKeDCWFnknMbYFds.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/A1/a1_Qt-iogEZ5hiR_zgSiYi79d4T_LFTOts3JmSHyea8.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/A1/a1_Qt-iogEZ5hiR_zgSiYi79d4T_LFTOts3JmSHyea8.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/A1/a1sMrP-ql1oXEI8VqcH_kRV7Fvw9AbCx8urI2WUxt8Q.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/A1/a1sMrP-ql1oXEI8VqcH_kRV7Fvw9AbCx8urI2WUxt8Q.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Ca/CAcWs7IVklndymMReXP1x2PutRtFbq0EbZ4rfM8UQvU.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Ca/CAcWs7IVklndymMReXP1x2PutRtFbq0EbZ4rfM8UQvU.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Ca/Cahkj66Z4r0eUvd9k2eutNbs9QG9GcXGA_g49wxW9ZQ.cache from /app_sync to /host_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Ca/Cahkj66Z4r0eUvd9k2eutNbs9QG9GcXGA_g49wxW9ZQ.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/DM/DMmiL3spbpgjN8I5HdRbYdSunwcPnEtK6LOcyhGBgeU.cache from /app_sync to /host_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/DM/DMmiL3spbpgjN8I5HdRbYdSunwcPnEtK6LOcyhGBgeU.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/DM/DmxaCybCI7WgaO_XmghoNRi6V14yIIHOVV6jkY_23f8.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/DM/DmxaCybCI7WgaO_XmghoNRi6V14yIIHOVV6jkY_23f8.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/EL/EL2Q_iBwG7hpyzPz5cm5VhHNHG95qWtpm7va6lBDpWg.cache from /app_sync to /host_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/EL/EL2Q_iBwG7hpyzPz5cm5VhHNHG95qWtpm7va6lBDpWg.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/EL/ElkqWKVYxFu3dFYOYZyXR0IxyQ5IVWxDBLSY_KLqzwk.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/EL/ElkqWKVYxFu3dFYOYZyXR0IxyQ5IVWxDBLSY_KLqzwk.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Ej/Eje5WW6G_5ua1GnmebAAG0WpgeT62j1Ua275e4iIT9c.cache from /app_sync to /host_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Ej/Eje5WW6G_5ua1GnmebAAG0WpgeT62j1Ua275e4iIT9c.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Ej/ejpoo2o4h_8FJcSLjqatxdHq6pjtnp48iwgHuWyKYiU.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Ej/ejpoo2o4h_8FJcSLjqatxdHq6pjtnp48iwgHuWyKYiU.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Ew/EWOm3funoX7gY2o4fsc3hVN51cyqfxE1C_hj2--sNcg.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Ew/EWOm3funoX7gY2o4fsc3hVN51cyqfxE1C_hj2--sNcg.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Ew/Ewy0P47GUd61hMcqjJn0c5bgxlL3MJMEnIAt42s6eVs.cache from /app_sync to /host_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Ew/Ewy0P47GUd61hMcqjJn0c5bgxlL3MJMEnIAt42s6eVs.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Ew/eW2ZXwGkSI_Rajn6UUKBAAFg6hR7Jqaj_-1Z1-TJwc4.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Ew/eW2ZXwGkSI_Rajn6UUKBAAFg6hR7Jqaj_-1Z1-TJwc4.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Ew/ewZ1u-KwPw2v9Mq0DpWyHbZTpLHqdpolmMRdD2gtUf8.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Ew/ewZ1u-KwPw2v9Mq0DpWyHbZTpLHqdpolmMRdD2gtUf8.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/FB/FB3chbp1AFE4nuvATHhn8VYVOVmaqgObY7soZrHb2PE.cache from /app_sync to /host_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/FB/FB3chbp1AFE4nuvATHhn8VYVOVmaqgObY7soZrHb2PE.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/FB/fByk1b5n0cequiDDeVBIdqMJ1QagXDd1O7xE3qzYfHU.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/FB/fByk1b5n0cequiDDeVBIdqMJ1QagXDd1O7xE3qzYfHU.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/FB/fbC9W__S1Cc7Mi1zwbRkqTzE_MJoZyxs4Qx6zIX9t_A.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/FB/fbC9W__S1Cc7Mi1zwbRkqTzE_MJoZyxs4Qx6zIX9t_A.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/G9/G957HXsHGBGAzC19qr2VYOQHtV285wLGO88V-mey-6g.cache from /app_sync to /host_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/G9/G957HXsHGBGAzC19qr2VYOQHtV285wLGO88V-mey-6g.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/G9/g9Y8Pulpytuh2qzCL55XxmEocipkLwG5Mm1ON4FyOj4.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/G9/g9Y8Pulpytuh2qzCL55XxmEocipkLwG5Mm1ON4FyOj4.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Hq/HqwbmK39Y2M7wz6NBMTUc3KPOLcTwKNeDrtWj5q-doM.cache from /app_sync to /host_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Hq/HqwbmK39Y2M7wz6NBMTUc3KPOLcTwKNeDrtWj5q-doM.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Hq/hqJMuF9ArjYtGxDH5tibyEIDOj5pn6RiKVdA8ti6_Lg.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Hq/hqJMuF9ArjYtGxDH5tibyEIDOj5pn6RiKVdA8ti6_Lg.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/KA/kAU1nBPnXuRC5pizuscvtC5Q3bfq3TbZHNv1t1fNP2E.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/KA/kAU1nBPnXuRC5pizuscvtC5Q3bfq3TbZHNv1t1fNP2E.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/KL/kLNIsODjuYUN-V8KACoQJWnbnx-buhUzobmx9NgkmC0.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/KL/kLNIsODjuYUN-V8KACoQJWnbnx-buhUzobmx9NgkmC0.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/KL/kLbNhYUerapFI6M4vfx59BhqZrXkl4vPnAFTFifijgU.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/KL/kLbNhYUerapFI6M4vfx59BhqZrXkl4vPnAFTFifijgU.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/KL/kLmh-ItFcboKuecdTTSDt4lcF2i9mqUa0cxdnxZQd14.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/KL/kLmh-ItFcboKuecdTTSDt4lcF2i9mqUa0cxdnxZQd14.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Ld/LdxxY_MsnUm2AkJaz9r0OEn0tpHOIYikgmmrQWmeQYY.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Ld/LdxxY_MsnUm2AkJaz9r0OEn0tpHOIYikgmmrQWmeQYY.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Ld/Ldy5tNAS0kI1vTWJkX0XW_dvQzlwuz9ph862Biaa9RI.cache from /app_sync to /host_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Ld/Ldy5tNAS0kI1vTWJkX0XW_dvQzlwuz9ph862Biaa9RI.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Ld/lDSfb6ZkqA7o_locTeDWy4gpcfcZeEjq0mpWlxO8cnc.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Ld/lDSfb6ZkqA7o_locTeDWy4gpcfcZeEjq0mpWlxO8cnc.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/NQ/NqrVIytsuAd5FlOhDi0HPHp5q3_OTsjOKEieF0LDpr4.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/NQ/NqrVIytsuAd5FlOhDi0HPHp5q3_OTsjOKEieF0LDpr4.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/NQ/nQJHdNy_fcr2A21Mei3eofabIHKw8zmk-y-7crxl-9w.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/NQ/nQJHdNy_fcr2A21Mei3eofabIHKw8zmk-y-7crxl-9w.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/NQ/nqSu70shhee9SKOuT8p_aakjwyasrthIPMseELBQY5c.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/NQ/nqSu70shhee9SKOuT8p_aakjwyasrthIPMseELBQY5c.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Nv/NvaM4kuVRnxqUNS03u8waFTwnlzZln1j0gA6Zv88Ytk.cache from /app_sync to /host_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Nv/NvaM4kuVRnxqUNS03u8waFTwnlzZln1j0gA6Zv88Ytk.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Nv/nVDb_03KziEwe0JyP8GdyPDiFIF3LtNrjxVlqjWiFkQ.cache from /host_sync to /app_sync
+[2019-11-12 15:20:06 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Nv/nVDb_03KziEwe0JyP8GdyPDiFIF3LtNrjxVlqjWiFkQ.cache
+[2019-11-12 15:20:06 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Nv/nvGsr74MT05JRd3lujopd0u_EKGwvdNtCOiq3cqIS5g.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Nv/nvGsr74MT05JRd3lujopd0u_EKGwvdNtCOiq3cqIS5g.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Oy/OYAr2UtfPw0roosK4U_GTN-c1QgPz-eEz-iL_OWSS5c.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Oy/OYAr2UtfPw0roosK4U_GTN-c1QgPz-eEz-iL_OWSS5c.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Oy/OyuyRe6SWrNovbntbX7_bVGEtf2CXuM_1MKeBSdrwY4.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Oy/OyuyRe6SWrNovbntbX7_bVGEtf2CXuM_1MKeBSdrwY4.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Pj/Pj2pRT6PHcJvUrErpnPSCfXM63J9UO-YXWFFXkXrSNk.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Pj/Pj2pRT6PHcJvUrErpnPSCfXM63J9UO-YXWFFXkXrSNk.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Pj/pj8cQhvh8ybp-bF7wYcJ8mEbtuAr9uDE9gz7yPtWrck.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Pj/pj8cQhvh8ybp-bF7wYcJ8mEbtuAr9uDE9gz7yPtWrck.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Pp/ppW-zxgpOQezZLbDTFIYvUTZFUujy-FX_kTfTjj7ghk.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Pp/ppW-zxgpOQezZLbDTFIYvUTZFUujy-FX_kTfTjj7ghk.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Qp/QP-bYkxroir7C4Zd2DYc-Gt-nCwKlPdDK7yhL1P1ios.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Qp/QP-bYkxroir7C4Zd2DYc-Gt-nCwKlPdDK7yhL1P1ios.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Qp/QPOYfd24XdFGhRftwkasmw-ed8wkUh9VZOKr0CCVhco.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Qp/QPOYfd24XdFGhRftwkasmw-ed8wkUh9VZOKr0CCVhco.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/RH/rhNSCaVxK82cBtziPVoQOzME7SH9X5ffS5Ve6bCyc68.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/RH/rhNSCaVxK82cBtziPVoQOzME7SH9X5ffS5Ve6bCyc68.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/RX/RXpqCrKOIAVIwR3A0mZy4Uoek2i6PehVs0JTRb-b-2Y.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/RX/RXpqCrKOIAVIwR3A0mZy4Uoek2i6PehVs0JTRb-b-2Y.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/RX/rxz0HG4klFtCv4W87RpnKsGNwE6ZMJI1Gupi_oTpbmM.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/RX/rxz0HG4klFtCv4W87RpnKsGNwE6ZMJI1Gupi_oTpbmM.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/SZ/SZb7-b8XXby-lM95HAOx1sGQG_ByG6BAH8mzfSlcNko.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/SZ/SZb7-b8XXby-lM95HAOx1sGQG_ByG6BAH8mzfSlcNko.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/SZ/sz6qusZRWDhigSQSl0Ym3XsPPD6R73fC16rvqLTBg3I.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/SZ/sz6qusZRWDhigSQSl0Ym3XsPPD6R73fC16rvqLTBg3I.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Td/TDY4wJ_gGksQXtMtEIUx7wVkzJosENhh2sIbysI-_Pg.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Td/TDY4wJ_gGksQXtMtEIUx7wVkzJosENhh2sIbysI-_Pg.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Td/Tdm1G0zNHMtJrm9u-GD-hp1CcZo4XpBGlZmPQIHDTQY.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Td/Tdm1G0zNHMtJrm9u-GD-hp1CcZo4XpBGlZmPQIHDTQY.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Vb/vB9o9KadHAYetn_ETgmjXJotafn63FpN1O3rFn_Zlhc.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Vb/vB9o9KadHAYetn_ETgmjXJotafn63FpN1O3rFn_Zlhc.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Xf/XfwZDYC4NnhS0K-abh-5WqehXmWKcrs_OLkmvEefCGQ.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Xf/XfwZDYC4NnhS0K-abh-5WqehXmWKcrs_OLkmvEefCGQ.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/Xf/xfhqt9Wl5i8JzCWgHvFX--rOjPRStCQzOUp3IWnDUwY.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/Xf/xfhqt9Wl5i8JzCWgHvFX--rOjPRStCQzOUp3IWnDUwY.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/ZJ/ZJ7cC9Skp08MVTcfNSPJs-kwpuGJvRbC5A258EOIcRA.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/ZJ/ZJ7cC9Skp08MVTcfNSPJs-kwpuGJvRbC5A258EOIcRA.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/ZJ/zJETB9yU421mHuOBjComr2-oXlOxZRFZj_9lgXGj_a4.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/ZJ/zJETB9yU421mHuOBjComr2-oXlOxZRFZj_9lgXGj_a4.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/ZJ/zJlp_WHo1asL4jwFEvFQS9iaW2eaQEMKTkrs9Uj1sKU.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/ZJ/zJlp_WHo1asL4jwFEvFQS9iaW2eaQEMKTkrs9Uj1sKU.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/ao/AoOm2N62KNA4blUE1i1mJT5iRj3s7xZ179VlZomEy4U.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/ao/AoOm2N62KNA4blUE1i1mJT5iRj3s7xZ179VlZomEy4U.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/ao/ao-5u5dOlnerd5EAKKvMmFJyMu93894chJGbzRZT-3M.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/ao/ao-5u5dOlnerd5EAKKvMmFJyMu93894chJGbzRZT-3M.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/b6/B69ckiTj8y1xrMtucZ2ov88Y5XEWPp-EJvyabJF6Ysk.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/b6/B69ckiTj8y1xrMtucZ2ov88Y5XEWPp-EJvyabJF6Ysk.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/b6/b6UwMFe9nmyaMF_AvEfU0lGJmCH1DxNt5gyt2RHD9A0.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/b6/b6UwMFe9nmyaMF_AvEfU0lGJmCH1DxNt5gyt2RHD9A0.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/bv/BVMmQl67Sv92pGhV6bknmYQ9FXnaYPps9B5QPAuwDxA.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/bv/BVMmQl67Sv92pGhV6bknmYQ9FXnaYPps9B5QPAuwDxA.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/bv/bvZAANi_cj2_wGC_gwpfbnKyJFYjJBkf2Ko0It9dRMw.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/bv/bvZAANi_cj2_wGC_gwpfbnKyJFYjJBkf2Ko0It9dRMw.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/fb/fByk1b5n0cequiDDeVBIdqMJ1QagXDd1O7xE3qzYfHU.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/fb/fByk1b5n0cequiDDeVBIdqMJ1QagXDd1O7xE3qzYfHU.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/gW/GWnP76KNIV_EH5ClwImAsUnrgEXeR-_8oNg_pkQ9teI.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/gW/GWnP76KNIV_EH5ClwImAsUnrgEXeR-_8oNg_pkQ9teI.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/gW/gWaivzZunWefCICG6EKkEkIDXR9_1u-by-cFQV-UWkc.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/gW/gWaivzZunWefCICG6EKkEkIDXR9_1u-by-cFQV-UWkc.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/hU/HU_9HIn5aZi9Bouh6RyHAYt8E1ic-Px_PHk9exMtx4s.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/hU/HU_9HIn5aZi9Bouh6RyHAYt8E1ic-Px_PHk9exMtx4s.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/hU/hUlPZuBPTL-qNhRMWxew0qQxnE7ENGUcwYNvV4OC328.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/hU/hUlPZuBPTL-qNhRMWxew0qQxnE7ENGUcwYNvV4OC328.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/hd/Hd_HhkcaNtFeNbtbGBne0CuxDry5clXoWjwck-fsNDY.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/hd/Hd_HhkcaNtFeNbtbGBne0CuxDry5clXoWjwck-fsNDY.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/hd/hd6PGch_CHoxlP4Wo8ymNmTbv5Oc9FYD_9wanTIIDNY.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/hd/hd6PGch_CHoxlP4Wo8ymNmTbv5Oc9FYD_9wanTIIDNY.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/iS/Is6A1GbDs0A6Dwpwef0asVUQLt6oCZeDy4f983riU2o.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/iS/Is6A1GbDs0A6Dwpwef0asVUQLt6oCZeDy4f983riU2o.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/iS/is5CCciFRS_If--TzI1qe6weknYzLe3YlYNJBSsCjzc.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/iS/is5CCciFRS_If--TzI1qe6weknYzLe3YlYNJBSsCjzc.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/ov/oVt2vgsO2kF8gXqM9iqgxR_0zVsDn9xm_mFucuZfl84.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/ov/oVt2vgsO2kF8gXqM9iqgxR_0zVsDn9xm_mFucuZfl84.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/ov/ova3L3fgjgWG1gshnBdflcKyf18ST6KGm2HK5nGkGF4.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/ov/ova3L3fgjgWG1gshnBdflcKyf18ST6KGm2HK5nGkGF4.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/rE/ReCDj8g4kzVxdWndIMA-FUufDxQLQUOARclPyywxbAg.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/rE/ReCDj8g4kzVxdWndIMA-FUufDxQLQUOARclPyywxbAg.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/rE/Rek3gkYAg3DzfShVvkURA8MfNP1dn_mnptZAmGIXT70.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/rE/Rek3gkYAg3DzfShVvkURA8MfNP1dn_mnptZAmGIXT70.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/rE/rEHm7GTpwOK_4DszzsXlne8u3737ZPRKjsZt56d9ZKE.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/rE/rEHm7GTpwOK_4DszzsXlne8u3737ZPRKjsZt56d9ZKE.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/rE/rExMChM_JCocprtq8HGBFfjVLY4bX8P8cb475Bs7wzc.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/rE/rExMChM_JCocprtq8HGBFfjVLY4bX8P8cb475Bs7wzc.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/sN/SnaqRuw31lFi_VXXAThfcylkwwVDrmW5pxURFewCU4g.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/sN/SnaqRuw31lFi_VXXAThfcylkwwVDrmW5pxURFewCU4g.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/sN/sN6waVbf_z5OdIsoUenyF8zioctvte3E2OZLiLpUftk.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/sN/sN6waVbf_z5OdIsoUenyF8zioctvte3E2OZLiLpUftk.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/sN/sne5uBPRXfaecMc4cMFThE6y4PFrsyg31aiwpgFWCX4.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/sN/sne5uBPRXfaecMc4cMFThE6y4PFrsyg31aiwpgFWCX4.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/u9/U9ScNrty2HlM0wkJiNfpGNInoMhpnsJjSzJMVm2K3cI.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/u9/U9ScNrty2HlM0wkJiNfpGNInoMhpnsJjSzJMVm2K3cI.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/u9/U9yc0wF-vYohCD8lrUiAeWczIL2IRqld3LzhqYUTsUk.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/u9/U9yc0wF-vYohCD8lrUiAeWczIL2IRqld3LzhqYUTsUk.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/u9/u9PhlEMKwIsxgYnxSbQ73N7xsf47g7fpjMj6fzO422I.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/u9/u9PhlEMKwIsxgYnxSbQ73N7xsf47g7fpjMj6fzO422I.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/u9/u9gGOJejI9fyOoTTh49vxmNJCuKFOBdLWAPXJP4S0XI.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/u9/u9gGOJejI9fyOoTTh49vxmNJCuKFOBdLWAPXJP4S0XI.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/vb/Vbahl_u3Ot-zUAtiTd3o04O_GjKKbfTJNf-z8XdnmwY.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/vb/Vbahl_u3Ot-zUAtiTd3o04O_GjKKbfTJNf-z8XdnmwY.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/vb/vB9o9KadHAYetn_ETgmjXJotafn63FpN1O3rFn_Zlhc.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/vb/vB9o9KadHAYetn_ETgmjXJotafn63FpN1O3rFn_Zlhc.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/vb/vbMZjaa4ai6Ra4cl_Pz5TFiCOjikYQnvUzEkrAOYhcA.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/vb/vbMZjaa4ai6Ra4cl_Pz5TFiCOjikYQnvUzEkrAOYhcA.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/xB/XB1Uzata3pesgo8eBf7PiA1sD6zDW8RVE102_k810iU.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/xB/XB1Uzata3pesgo8eBf7PiA1sD6zDW8RVE102_k810iU.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/yW/yWTcir925JX81TIGx4wnynU--nefLatEOrWSwcaBYNE.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/yW/yWTcir925JX81TIGx4wnynU--nefLatEOrWSwcaBYNE.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/yW/yWZJGBkAlLoLmDWJdj2_mPqfEsBs4qEFVH3TsQFqezM.cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/yW/yWZJGBkAlLoLmDWJdj2_mPqfEsBs4qEFVH3TsQFqezM.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Copying tmp/cache/assets/sprockets/v3.0/yW/ywTmmjIr_oeIQZsGFKPU1NlYgBMlsK7eDgUx_LuQk78.cache from /host_sync to /app_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Copying tmp/cache/assets/sprockets/v3.0/yW/ywTmmjIr_oeIQZsGFKPU1NlYgBMlsK7eDgUx_LuQk78.cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Updating file tmp/cache/bootsnap-compile-cache/79/7e50fdf52fdf16 from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Updating file tmp/cache/bootsnap-compile-cache/79/7e50fdf52fdf16
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Updating file tmp/cache/bootsnap-compile-cache/a0/642c3852293f10 from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Updating file tmp/cache/bootsnap-compile-cache/a0/642c3852293f10
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Updating file tmp/cache/bootsnap-load-path-cache from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Updating file tmp/cache/bootsnap-load-path-cache
+[2019-11-12 15:20:07 +0900] Sync Log:  [BGN] Updating file tmp/pids/server.pid from /app_sync to /host_sync
+[2019-11-12 15:20:07 +0900] Sync Log:  [END] Updating file tmp/pids/server.pid
+[2019-11-12 15:20:07 +0900] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 15:20:07.09 on 12 Nov 2019
+[2019-11-12 15:20:07 +0900] Sync Log:  Synchronization complete at 15:20:07  (107 items transferred, 0 skipped, 0 failed)
+[2019-11-12 15:23:41 +0900] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 15:23:41.26 on 12 Nov 2019
+[2019-11-12 15:23:41 +0900] Sync Log:  [BGN] Updating file db/mysql_data/ib_buffer_pool from /host_sync to /app_sync
+[2019-11-12 15:23:41 +0900] Sync Log:  [END] Updating file db/mysql_data/ib_buffer_pool
+[2019-11-12 15:23:41 +0900] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 15:23:41.27 on 12 Nov 2019
+[2019-11-12 15:23:41 +0900] Sync Log:  Synchronization complete at 15:23:41  (1 item transferred, 0 skipped, 0 failed)
+[2019-11-12 15:23:42 +0900] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 15:23:42.85 on 12 Nov 2019
+[2019-11-12 15:23:42 +0900] Sync Log:  [BGN] Updating file db/mysql_data/ibdata1 from /host_sync to /app_sync
+[2019-11-12 15:23:43 +0900] Sync Log:  [END] Updating file db/mysql_data/ibdata1
+[2019-11-12 15:23:43 +0900] Sync Log:  [BGN] Deleting db/mysql_data/ibtmp1 from /app_sync
+[2019-11-12 15:23:43 +0900] Sync Log:  [END] Deleting db/mysql_data/ibtmp1
+[2019-11-12 15:23:43 +0900] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 15:23:43.73 on 12 Nov 2019
+[2019-11-12 15:23:43 +0900] Sync Log:  Synchronization complete at 15:23:43  (2 items transferred, 0 skipped, 0 failed)
