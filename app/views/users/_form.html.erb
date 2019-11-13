@@ -19,6 +19,9 @@
       <p>Profile-image</p>
       <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %>
 
+      <%= f.label :introduction %>
+      <%= f.text_area :introduction, rows: 6 %>
+
       <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 
     <% end %>

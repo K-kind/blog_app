@@ -1,4 +1,8 @@
-<%= attachment_image_tag current_user, :profile_image, size: "60x60", format: 'jpeg', class: "", fallback: "no_image.png" %>
-<h1><%= current_user.name %></h1>
-<span><%= link_to "view my profile", current_user %></span>
-<span><%= pluralize(current_user.microposts.count, "micropost") %></span>
+<% if @micropost %>
+  <%= attachment_image_tag @micropost.user, :profile_image, size: "60x60", format: 'jpeg', class: "", fallback: "no_image.png" %>
+  <h1><%= @micropost.user.name %></h1>
+  <p>Introduction</p>
+  <p><%= simple_format(@micropost.user.introduction) %></p>
+  <span><%= link_to "view my profile", @micropost.user %></span>
+  <span><%= pluralize(@micropost.user.microposts.count, "micropost") %></span>
+<% end %>

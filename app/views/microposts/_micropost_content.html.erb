@@ -1,0 +1,7 @@
+<h2><%= link_to micropost.title, micropost %></h2>
+<div><%= micropost.content %></div>
+<span>カテゴリー：<%= micropost.category %></span>
+<span>投稿日：<%= micropost.created_at.strftime("%Y/%m/%d(%a)") %></span>
+<% if micropost.created_at.to_date != micropost.updated_at.to_date %>
+  <span>更新日：<%= micropost.updated_at.strftime("%Y/%m/%d(%a)") %></span>
+<% end%>

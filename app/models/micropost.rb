@@ -1,14 +1,18 @@
 class Micropost < ApplicationRecord
   belongs_to :user
-  default_scope -> { order(created_at: :desc) }
+  # default_scope -> { order(created_at: :desc) }
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 1500 }
-  # validate :post_image_size
+  validates :title, presence: true, length: { maximum: 100 }
+  validates :category, presence: true, length: { maximum: 20 }
   attachment :post_image
+  has_rich_text :content
 
-  # def post_image_size
-  #   if post_image.size > 5.megabytes
-  #     errors.add(:post_image, "should be less than 10MB")
-  #   end
-  # end
+  def next
+    user.microposts.where("id > ?", id).first
+  end
+
+  def prev
+    user.microposts.where("id < ?", id).last
+  end
 end
