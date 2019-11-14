@@ -8,4 +8,12 @@ module ApplicationHelper
      page_title + " | " + base_title
    end
  end
+
+ def unique_categories(all_posts)
+    categories = []
+    all_posts.each do |post|
+      categories << post.category
+    end
+    categories.uniq!
+  end
 end

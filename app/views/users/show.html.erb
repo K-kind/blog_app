@@ -1,15 +1,17 @@
 <% provide(:title, @user.name ) %>
 <div class="row">
-  <div class="col-md-8">
-    <h2>自己紹介</h2>
-    <% if @user.microposts.any? %>
-      <%= @user.microposts.first.content %>
-    <% end %>
+  <div class="col-md-9 main">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 intro-post">
+        <% if @user.microposts.any? %>
+          <h4><%= @user.microposts.first.title %></h4>
+          <%= @user.microposts.first.content %>
+        <% end %>
+      </div>
+    </div>
   </div>
-  <aside class="col-md-4">
-    <section class="user-info">
-      <%= render 'shared/user_info' %>  
-      <%= render 'shared/aside_menu' %>  
-    </section>
+  <aside class="col-md-3">
+    <%= render 'shared/user_info', user: @user %>  
+    <%= render 'shared/aside_menu' %>  
   </aside>
 </div>

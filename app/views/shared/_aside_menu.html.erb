@@ -1,11 +1,86 @@
-<ul>
-  <li>人気記事</li>
-  <li>タイトル、画像</li>
-  <li>タイトル、画像</li>
-  <li>タイトル、画像</li>
-</ul>
-<ul>
-  <li>アーカイブ</li>
-  <li>カテゴリー</li>
-  <li>記事一覧</li>
-</ul>
+<div class="aside-menus">
+  <div class="popular-posts">
+    <h4>Popular posts</h4>
+    <ul>
+      <% @popular_posts.each do |post| %>
+        <li><%= link_to post.title, post %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="search-menu clearfix">
+    <h4><span class="glyphicon glyphicon-search"></span> Search posts</h4>
+    <%= form_tag(search_microposts_path,:method => 'get') do %>
+      <%= text_field_tag :search %>
+      <%= submit_tag 'Search', :name => nil, class: "search-btn" %>
+    <% end %>
+  </div>
+  <div class="post-menus">
+    <ul>
+      <li>
+        <%# <a href="#" class="dropdown-toggle" data-toggle="dropdown"> %>
+        <a href="#" class="toggler">
+          Archives <b class="caret"></b>
+        </a>
+        <ul class="down-menu">
+          <li>
+            <a href="#" class="toggler">
+              2019/11 <b class="caret"></b>
+            </a>
+            <ul class="down-menu">
+              <% @nov_posts.each do |post| %>
+                <li><%= link_to post.title, post %></li>
+              <% end %>
+            </ul>
+          </li>
+          <% if @dec_posts.any? %>
+          <li>
+            <a href="#" class="toggler">
+              2019/12 <b class="caret"></b>
+            </a>
+            <ul class="down-menu">
+              <% @dec_posts.each do |post| %>
+                <li><%= link_to post.title, post %></li>
+              <% end %>
+            </ul>
+          </li>
+          <% end %>
+          <% if @jan_posts.any? %>
+          <li>
+            <a href="#" class="toggler">
+              2020/01 <b class="caret"></b>
+            </a>
+            <ul class="down-menu">
+              <% @jan_posts.each do |post| %>
+                <li><%= link_to post.title, post %></li>
+              <% end %>
+            </ul>
+          </li>
+          <% end %>
+          <% if @feb_posts.any? %>
+          <li>
+            <a href="#" class="toggler">
+              2020/02 <b class="caret"></b>
+            </a>
+            <ul class="down-menu">
+              <% @feb_posts.each do |post| %>
+                <li><%= link_to post.title, post %></li>
+              <% end %>
+            </ul>
+          </li>
+          <% end %>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="toggler">
+          Categories <b class="caret"></b>
+        </a>
+        <ul class="down-menu">
+          <% unique_categories(@all_posts).each do |category| %>
+            <li><%= link_to category, categories_microposts_path(category: category) %></li>
+          <% end %>
+        </ul>
+      </li>
+      <li><%= link_to "All posts", microposts_path %></li>
+    </ul>
+  </div>
+</div>

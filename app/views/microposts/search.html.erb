@@ -1,0 +1,33 @@
+<% provide :title, "Search for \"#{@search}\"" %>
+<div lass="row">
+  <div class="col-md-9 main">
+    <h3>Posts containing "<%= @search %>"</h3>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th class="title-col">Title</th>
+              <th>Category</th>
+              <th>Posted at</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @microposts.each do |micropost| %>
+              <tr>
+                <td class="title-col"><%= link_to micropost.title, micropost, class: "table-link" %></td>
+                <td><%= link_to micropost.category, micropost, class: "table-link" %></td>
+                <td><%= link_to micropost.created_at.strftime("%Y/%m/%d(%a)"), micropost, class: "table-link" %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= will_paginate @microposts %>
+      </div>
+    </div>
+  </div>
+  <aside class="col-md-3">
+    <%= render 'shared/user_info', user: @user %>  
+    <%= render 'shared/aside_menu' %>  
+  </aside>
+</div>

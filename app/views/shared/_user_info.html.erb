@@ -1,8 +1,12 @@
-<% if @micropost %>
-  <%= attachment_image_tag @micropost.user, :profile_image, size: "60x60", format: 'jpeg', class: "", fallback: "no_image.png" %>
-  <h1><%= @micropost.user.name %></h1>
-  <p>Introduction</p>
-  <p><%= simple_format(@micropost.user.introduction) %></p>
-  <span><%= link_to "view my profile", @micropost.user %></span>
-  <span><%= pluralize(@micropost.user.microposts.count, "micropost") %></span>
+<% if user %>
+  <section class="user-info">
+    <div class="profile clearfix">
+      <%= link_to user do %>
+        <%= attachment_image_tag user, :profile_image, size: "70x70", format: 'jpeg', class: "", fallback: "no_image.png" %>
+        <h3><%= user.name %></h3>
+      <% end %>
+    </div>
+    <%= simple_format(user.introduction) %>
+    <p class="to-profile"><%= link_to "About myself", user %></p>
+  </section>
 <% end %>

@@ -15,17 +15,16 @@
   </head>
 
   <body>
-    <header class="navbar navbar-default">
+    <header class="clearfix">
       <div class="container">
-        <nav class="nav navbar-nav navbar-left">
+        <nav class="header-left">
           <h1><%= link_to "Progress", root_path %></h1>
         </nav>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home", root_path %></li>
+        <nav class="header-right">
+          <ul>
             <li><%= link_to "About", about_path %></li>
             <% if logged_in? %>
-              <li><%= link_to "新規投稿", new_micropost_path %></li>
+              <li><%= link_to "New post", new_micropost_path %></li>
               <li><%= link_to "Users", users_path %></li>
               <li><%= link_to "Profile", current_user %></li>
               <li><%= link_to "Settings", edit_user_path(current_user) %></li>

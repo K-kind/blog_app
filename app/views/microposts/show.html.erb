@@ -1,24 +1,29 @@
 <% provide :title, @micropost.title %>
 <div class="row">
-  <div class="col-md-8">
-    <%= render 'microposts/micropost_content', micropost: @micropost %>
-    <% if current_user?(@micropost.user) %>
-      <span><%= link_to "編集", edit_micropost_path(@micropost) %></span>
-      <span><%= link_to "削除", micropost_path(@micropost), method: :delete, data: { confirm: "You sure?"} %></span>
-    <% end %>
-    <div>
-      <% if @micropost.next%>
-        <span><%= link_to "Next", micropost_path(@micropost.next) %></span>
-      <% end %>
-      <% if @micropost.prev %>
-        <span><%= link_to "Previous", micropost_path(@micropost.prev) %></span>
-      <% end %>
+  <div class="col-md-9 main">
+    <div class="row clearfix">
+      <div class="col-md-10 col-md-offset-1">
+        <%= render 'microposts/micropost_content', micropost: @micropost %>
+        <% if current_user?(@micropost.user) %>
+          <span><%= link_to "編集", edit_micropost_path(@micropost), class: "btn btn-success" %></span>
+          <span><%= link_to "削除", micropost_path(@micropost), method: :delete, data: { confirm: "You sure?"}, class: "btn btn-danger" %></span>
+        <% end %>
+        <p class="page-view">PV: <%= @micropost.impressions_count %></p>
+        <div>
+          <p>
+            <% if @micropost.next%>
+              <span class="show-next"><%= link_to "←Next (#{@micropost.next.title})", micropost_path(@micropost.next) %></span>
+            <% end %>
+            <% if @micropost.prev %>
+              <span class="show-prev"><%= link_to "Prev (#{@micropost.prev.title})→", micropost_path(@micropost.prev) %></span>
+            <% end %>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-  <aside class="col-md-4">
-    <section class="user-info">
-      <%= render 'shared/user_info' %>  
+  <aside class="col-md-3">
+      <%= render 'shared/user_info', user: @micropost.user %>  
       <%= render 'shared/aside_menu' %>  
-    </section>
   </aside>
 </div>
