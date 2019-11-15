@@ -11,13 +11,12 @@
     <h4><span class="glyphicon glyphicon-search"></span> Search posts</h4>
     <%= form_tag(search_microposts_path,:method => 'get') do %>
       <%= text_field_tag :search %>
-      <%= submit_tag 'Search', :name => nil, class: "search-btn" %>
+      <%= submit_tag 'Search', :name => nil, class: "blue-btn" %>
     <% end %>
   </div>
   <div class="post-menus">
     <ul>
       <li>
-        <%# <a href="#" class="dropdown-toggle" data-toggle="dropdown"> %>
         <a href="#" class="toggler">
           Archives <b class="caret"></b>
         </a>

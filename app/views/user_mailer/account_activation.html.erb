@@ -1,9 +1,9 @@
 <h1>Progress</h1>
 
-<p>Hi <%= @user.name %>,</p>
+<p><%= @user.name %>さん、ご登録ありがとうございます。</p>
 
 <p>
-Welcome to the Progress! Click on the link below to activate your account:
+下のリンクをクリックしていただくと、登録が完了して、ログインしていただけるようになります。
 </p>
 
 <%= link_to "Activate", edit_account_activation_url(@user.activation_token,

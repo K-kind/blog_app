@@ -4,21 +4,17 @@ class MicropostsController < ApplicationController
   impressionist :actions=> [:show]
 
   def index
-    @user = Micropost.last.user
     @microposts = Micropost.paginate(page: params[:page]).order(id: "DESC")
-    @popular_posts = Micropost.order('impressions_count DESC').take(3)
-    @nov_posts = Micropost.where("created_at BETWEEN '2019/11/01 00:00:00' AND '2019/12/01 00:00:00'")
-    @dec_posts = Micropost.where("created_at BETWEEN '2019/12/01 00:00:00' AND '2020/01/01 00:00:00'")
-    @jan_posts = Micropost.where("created_at BETWEEN '2020/01/01 00:00:00' AND '2020/02/01 00:00:00'")
-    @feb_posts = Micropost.where("created_at BETWEEN '2020/02/01 00:00:00' AND '2020/03/01 00:00:00'")
-    @all_posts = Micropost.all
+    aside_settings
   end
+
   def new
     @micropost = current_user.microposts.build
   end
 
   def create
     @micropost = current_user.microposts.build(micropost_params)
+    @micropost.content_string = @micropost.content.to_s
     if @micropost.save
       flash[:success] = "Micropost created!"
       redirect_to @micropost
@@ -30,12 +26,9 @@ class MicropostsController < ApplicationController
   def show
     @micropost = Micropost.find(params[:id])
     impressionist(@micropost, nil, :unique => [:session_hash])
-    @popular_posts = Micropost.order('impressions_count DESC').take(3)
-    @nov_posts = Micropost.where("created_at BETWEEN '2019/11/01 00:00:00' AND '2019/12/01 00:00:00'")
-    @dec_posts = Micropost.where("created_at BETWEEN '2019/12/01 00:00:00' AND '2020/01/01 00:00:00'")
-    @jan_posts = Micropost.where("created_at BETWEEN '2020/01/01 00:00:00' AND '2020/02/01 00:00:00'")
-    @feb_posts = Micropost.where("created_at BETWEEN '2020/02/01 00:00:00' AND '2020/03/01 00:00:00'")
-    @all_posts = Micropost.all
+    @comments = @micropost.comments.paginate(page: params[:page], :per_page => 8)
+    @comment = Comment.new
+    aside_settings
   end
 
   def destroy
@@ -49,6 +42,8 @@ class MicropostsController < ApplicationController
 
   def update
     if @micropost.update_attributes(micropost_params)
+      @micropost.content_string = @micropost.content.to_s
+      @micropost.save
       flash[:success] = "Post updated"
       redirect_to @micropost
     else
@@ -59,25 +54,13 @@ class MicropostsController < ApplicationController
   def categories
     @category = params[:category]
     @microposts = Micropost.where(category: @category).paginate(page: params[:page]).order(id: "DESC")
-    @user = @microposts.last.user
-    @popular_posts = Micropost.order('impressions_count DESC').take(3)
-    @nov_posts = Micropost.where("created_at BETWEEN '2019/11/01 00:00:00' AND '2019/12/01 00:00:00'")
-    @dec_posts = Micropost.where("created_at BETWEEN '2019/12/01 00:00:00' AND '2020/01/01 00:00:00'")
-    @jan_posts = Micropost.where("created_at BETWEEN '2020/01/01 00:00:00' AND '2020/02/01 00:00:00'")
-    @feb_posts = Micropost.where("created_at BETWEEN '2020/02/01 00:00:00' AND '2020/03/01 00:00:00'")
-    @all_posts = Micropost.all
+    aside_settings
   end
 
   def search
     @search = params[:search]
     @microposts = Micropost.search(@search).paginate(page: params[:page]).order(id: "DESC")
-    @user = Micropost.last.user
-    @popular_posts = Micropost.order('impressions_count DESC').take(3)
-    @nov_posts = Micropost.where("created_at BETWEEN '2019/11/01 00:00:00' AND '2019/12/01 00:00:00'")
-    @dec_posts = Micropost.where("created_at BETWEEN '2019/12/01 00:00:00' AND '2020/01/01 00:00:00'")
-    @jan_posts = Micropost.where("created_at BETWEEN '2020/01/01 00:00:00' AND '2020/02/01 00:00:00'")
-    @feb_posts = Micropost.where("created_at BETWEEN '2020/02/01 00:00:00' AND '2020/03/01 00:00:00'")
-    @all_posts = Micropost.all
+    aside_settings
   end
 
   private

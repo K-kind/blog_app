@@ -8,13 +8,16 @@
           <p class="show-this"><%= link_to "Show this post", @micropost %></p>
         </li>
         <% if @prev_micropost %>
-          <li><%= render 'microposts/micropost_content', micropost: @prev_micropost %></li>
+          <li>
+            <%= render 'microposts/micropost_content', micropost: @prev_micropost %>
+            <p class="show-this"><%= link_to "Show this post", @prev_micropost %></p>
+          </li>
         <% end %>
       </div>
     </div>
   </div>
   <aside class="col-md-3">
-    <%= render 'shared/user_info', user: @micropost.user %>  
+    <%= render 'shared/user_info' %>  
     <%= render 'shared/aside_menu' %>  
   </aside>
 </div>

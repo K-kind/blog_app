@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :following, :followers]
   before_action :correct_user, only: [:edit, :update]
-  before_action :admin_user, only: :destroy
+  before_action :admin_user, only: [:destroy, :index]
 
   def index
     @users = User.where(activated: true).paginate(page: params[:page])
@@ -9,14 +9,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @comments = @user.comments.select(:micropost_id).distinct.paginate(page: params[:page])
     redirect_to root_url and return unless @user.activated?
-    @microposts = @user.microposts.paginate(page: params[:page])
-    @popular_posts = Micropost.order('impressions_count DESC').take(3)
-    @nov_posts = Micropost.where("created_at BETWEEN '2019/11/01 00:00:00' AND '2019/12/01 00:00:00'")
-    @dec_posts = Micropost.where("created_at BETWEEN '2019/12/01 00:00:00' AND '2020/01/01 00:00:00'")
-    @jan_posts = Micropost.where("created_at BETWEEN '2020/01/01 00:00:00' AND '2020/02/01 00:00:00'")
-    @feb_posts = Micropost.where("created_at BETWEEN '2020/02/01 00:00:00' AND '2020/03/01 00:00:00'")
-    @all_posts = Micropost.all
+    aside_settings
   end
 
   def new
@@ -82,4 +77,5 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
+
 end

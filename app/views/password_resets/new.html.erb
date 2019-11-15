@@ -1,13 +1,18 @@
 <% provide(:title, "Forgot password") %>
-<h1>Forgot password</h1>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(:password_reset, url: password_resets_path) do |f| %>
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+  <div class="col-md-10 col-md-offset-1 user-edit">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2>Forgot password</h2>
+        <p>メールが送信されます。リンクをクリックしていただくと、パスワードリセットフォームが表示されます。</p>
+        <%= form_for(:password_reset, url: password_resets_path) do |f| %>
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.submit "Submit", class: "btn btn-primary" %>
-    <% end %>
+          <%= f.submit "Submit", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,5 +1,5 @@
-Hi <%= @user.name %>
+<%= @user.name %>さん、ご登録ありがとうございます。
 
-Welcome to the Progress! Click on the link to activate your account:
+下のリンクをクリックしていただくと、登録が完了して、ログインしていただけるようになります。
 
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
