@@ -74,8 +74,8 @@
           Categories <b class="caret"></b>
         </a>
         <ul class="down-menu">
-          <% unique_categories(@all_posts).each do |category| %>
-            <li><%= link_to category, categories_microposts_path(category: category) %></li>
+          <% @categories.each do |category| %>
+            <li><%= link_to category.category, categories_microposts_path(category: category.category) %></li>
           <% end %>
         </ul>
       </li>

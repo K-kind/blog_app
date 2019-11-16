@@ -19,6 +19,6 @@ class ApplicationController < ActionController::Base
     @dec_posts = Micropost.where("created_at BETWEEN '2019/12/01 00:00:00' AND '2020/01/01 00:00:00'")
     @jan_posts = Micropost.where("created_at BETWEEN '2020/01/01 00:00:00' AND '2020/02/01 00:00:00'")
     @feb_posts = Micropost.where("created_at BETWEEN '2020/02/01 00:00:00' AND '2020/03/01 00:00:00'")
-    @all_posts = Micropost.all
+    @categories = Micropost.all.select(:category).distinct
   end
 end
