@@ -11,7 +11,6 @@ gem 'faker'
 gem 'will_paginate',           '3.1.7'
 gem 'bootstrap-will_paginate', '1.0.0'
 # Use postgresql as the database for Active Record
-gem 'pg', '>= 0.18', '< 2.0'
 gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -56,6 +55,10 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
   gem 'rails-controller-testing'
+end
+
+group :production, :staging do
+   gem 'unicorn'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
