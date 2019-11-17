@@ -151,21 +151,22 @@ footer {
 }
 
 .user-info {
-  margin-top: 10px;
+  margin-top: 5px;
   border-bottom: 2px solid gray;
-  h4 {
+  > h4 {
     font-size: 16px;
   }
-  .attachment {
-    border: 2px solid silver;
-    float: left
-  }
   .profile {
-    margin-bottom: 10px;
-    h3 {
-      padding-left: 20px;
-      font-size: 20px;
-      float: left;
+    margin: 15px 10px 10px 0;
+    display: flex;
+    justify-content: center;
+    img {
+      border: 2px solid silver;
+      border-radius: 4px;
+      // margin-bottom:10px;
+    }
+    p {
+      // display: inline-block;
     }
   }
   .to-profile {
@@ -224,7 +225,9 @@ footer {
 
 .main {
   border-right: 2px solid gray;
-  min-height: 600px;
+  min-height: 700px;
+  margin-top: -10px;
+  padding-top: 10px;
   h3 {
     font-size: 28px;
   }
@@ -234,7 +237,12 @@ footer {
     font-size: 26px;
     padding: 30px 0;
     text-align: center;
+    padding-top: 10px; 
   }
+}
+
+.post-show {
+  padding-top: 20px;
 }
 
 .latest-posts {
@@ -263,6 +271,11 @@ footer {
     float: right;
     font-size: 16px;
   }
+}
+
+.form-img {
+  border: 2px solid silver;
+  border-radius: 10px;
 }
 
 .intro-post {
@@ -378,6 +391,7 @@ footer {
 }
 
 .new-post {
+  padding-bottom: 30px;
   h3 {
     font-size: 28px;
     margin-bottom: 20px;
@@ -395,7 +409,7 @@ footer {
   }
 }
 
-.signup {
+.signup, .edit-form {
   padding-bottom: 30px;
 }
 

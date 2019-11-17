@@ -20,8 +20,10 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil:true
   validates :introduction, length: { maximum: 400 }
+  validates :profile_image, file_size: { in: 1.kilobytes..15.megabyte },
+                      file_content_type: { allow: ['image/jpeg', 'image/png', 'image/gif'] }
 
-  attachment :profile_image
+  has_one_attached :profile_image
 
   class << self
     def digest(string)

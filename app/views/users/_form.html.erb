@@ -1,27 +1,31 @@
 <%= form_for(@user, url: yield(:path_name)) do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
+  <%= render 'shared/error_messages', object: f.object %>
 
-      <%= f.label :name %><span class="required">(必須)</span>
-      <%= f.text_field :name, class: "form-control" %>
+  <%= f.label :name %><span class="required">(必須)</span>
+  <%= f.text_field :name, class: "form-control" %>
 
-      <%= f.label :email %><span class="required">(必須)</span>
-      <%= f.email_field :email, class: "form-control" %>
+  <%= f.label :email %><span class="required">(必須)</span>
+  <%= f.email_field :email, class: "form-control" %>
 
-      <%= f.label :password %><span class="required">(必須: 6文字以上)</span>
-      <%= f.password_field :password, class: "form-control" %>
+  <%= f.label :password %><span class="required">(必須: 6文字以上)</span>
+  <%= f.password_field :password, class: "form-control" %>
 
-      <%= f.label :password_confirmation, "Confirmation" %><span class="required">(必須: 6文字以上)</span>
-      <%= f.password_field :password_confirmation, class: "form-control" %>
+  <%= f.label :password_confirmation, "Confirmation" %><span class="required">(必須: 6文字以上)</span>
+  <%= f.password_field :password_confirmation, class: "form-control" %>
 
-      <div>
-        <%= attachment_image_tag @user, :profile_image, size: "70x70", format: 'jpeg', class: "", fallback: "no_image.png" %>
-      </div>
-      <p>Profile-image</p>
-      <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %>
-
-      <%= f.label :introduction %>
-      <%= f.text_area :introduction, class: "form-control", rows: 6, placeholder: "簡単な自己紹介（任意です）" %>
-
-      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
-
+  <div>
+    <% if @user.profile_image.attached? %>
+      <%= image_tag @user.profile_image, size: '70x70', class:"form-img" %>
+    <% else %>
+      <%= image_tag "no_image.png", size: '70x70', class:"form-img" %>
     <% end %>
+  </div>
+  <p>Profile-image</p>
+  <%= f.file_field :profile_image, accept: "image/png, image/jpeg, image/gif", placeholder: "プロフィール画像", class: "user-edit-form" %>
+
+  <%= f.label :introduction %>
+  <%= f.text_area :introduction, class: "form-control", rows: 6, placeholder: "簡単な自己紹介（任意です）" %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+
+<% end %>

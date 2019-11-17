@@ -2,12 +2,13 @@
 <div class="row">
   <div class="col-md-9 main">
     <div class="row clearfix">
-      <div class="col-xs-12 col-md-10 col-md-offset-1">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 post-show">
         <%= render 'microposts/micropost_content', micropost: @micropost %>
         <% if current_user?(@micropost.user) %>
           <span><%= link_to "Edit", edit_micropost_path(@micropost), class: "btn btn-success" %></span>
           <span><%= link_to "Destroy", micropost_path(@micropost), method: :delete, data: { confirm: "You sure?"}, class: "btn btn-danger" %></span>
         <% end %>
+        <p class="page-view">PV: <%= @micropost.impressions_count %></p>
         <div class="comment-section clearfix">
           <h4>Comments</h4>
           <% if @comments.any? %>
@@ -16,7 +17,11 @@
                 <div class="comment-list">
                   <div class="row">
                     <div class="col-md-2 comment-user">
-                      <%= attachment_image_tag c.user, :profile_image, size: "50x50", format: 'jpeg', class: "", fallback: "no_image.png" %>
+                      <% if c.user.profile_image.attached? %>
+                        <%= image_tag c.user.profile_image, height: "50" %>
+                      <% else %>
+                        <%= image_tag "no_image.png", size: '50x50' %>
+                      <% end %>
                       <%= link_to c.user.name, c.user %>
                     </div>
                     <div class="col-md-10 comment-text">
@@ -53,7 +58,6 @@
             <input type="submit" value="Submit comment" class="blue-btn comment-btn not-active">
           <% end %>
         </div>
-        <p class="page-view">PV: <%= @micropost.impressions_count %></p>
         <div>
           <p>
             <% if @micropost.next%>

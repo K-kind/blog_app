@@ -4,7 +4,11 @@
     <div class="row">
       <div class="col-xs-12 col-md-10 col-md-offset-1 intro-post">
         <h3><%= @user.name %></h3>
-        <%= attachment_image_tag @user, :profile_image, size: "150x150", format: 'jpeg', class: "", fallback: "no_image.png" %>
+        <% if @user.profile_image.attached? %>
+          <%= image_tag @user.profile_image, height: "150" %>
+        <% else %>
+          <%= image_tag "no_image.png", size: '150x150' %>
+        <% end %>
         <div class="profile-text">
           <%= simple_format(@user.introduction) %>
         </div>

@@ -8,7 +8,7 @@ class Micropost < ApplicationRecord
   validates :category, presence: true, length: { maximum: 20 }
   attachment :post_image
   has_rich_text :content
-  is_impressionable
+  is_impressionable counter_cache: true
 
   def next
     user.microposts.where("id > ?", id).first

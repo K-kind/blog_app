@@ -1,7 +1,6 @@
 class MicropostsController < ApplicationController
   before_action :logged_in_user, except: [:show, :index]
   before_action :correct_user, only: [:destroy, :edit, :update]
-  impressionist :actions=> [:show]
 
   def index
     @microposts = Micropost.paginate(page: params[:page]).order(id: "DESC")
@@ -25,7 +24,7 @@ class MicropostsController < ApplicationController
 
   def show
     @micropost = Micropost.find(params[:id])
-    impressionist(@micropost, nil, :unique => [:session_hash])
+    impressionist(@micropost, nil, unique: [:session_hash])
     @comments = @micropost.comments.paginate(page: params[:page], :per_page => 8)
     @comment = Comment.new
     aside_settings
