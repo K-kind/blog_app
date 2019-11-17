@@ -96,15 +96,18 @@ input {
   border-left: 2px solid gray;
   border-right: 2px solid gray;
 }
+.header-container {
+  height: 75px;
+}
 header {
-  height: 70px;
+  height: 75px;
   border-bottom: 2px solid gray;
 }
 .header-left {
   h1 {
     float: left;
     margin: 0;
-    padding-top: 15px;
+    padding-top: 17px;
     padding-left: 15px;
     a {
       font-family: 'arial black', Courier, Montserrat, Helvetica, Arial, "sans-serif";
@@ -114,12 +117,22 @@ header {
 .header-right {
   ul {
     float: right;
-    padding-right: 5px;
+    padding-right: 15px;
+    margin: 0;
     li {
-      line-height: 70px;
+      line-height: 75px;
       font-size: 18px;
       float: left;
-      padding: 0 10px;
+      padding-left: 20px;
+    }
+    .header-user {
+      padding: 0;
+      img {
+        border: 2px solid silver;
+        border-radius: 3.5px;
+        margin-right: 5px;
+        margin-left: 20px;
+      }
     }
   }
 }
@@ -226,7 +239,6 @@ footer {
 .main {
   border-right: 2px solid gray;
   min-height: 700px;
-  margin-top: -10px;
   padding-top: 10px;
   h3 {
     font-size: 28px;
@@ -260,6 +272,9 @@ footer {
   text-align: right;
 }
 
+.next-prev {
+  padding-bottom: 20px;
+}
 .show-next {
   a {
     float: left;
@@ -333,7 +348,7 @@ footer {
       text-align: center;
       img {
         border: 2px solid silver;
-        border-radius: 50%;
+        border-radius: 4px;
         display: block;
         margin: 0 auto;
       }
@@ -380,6 +395,10 @@ footer {
     font-size: 28px;
     margin-bottom: 30px;
   }
+}
+.signup-now {
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .required {

@@ -59,7 +59,7 @@
           <% end %>
         </div>
         <div>
-          <p>
+          <p class="next-prev clearfix">
             <% if @micropost.next%>
               <span class="show-next"><%= link_to "←Next (#{@micropost.next.title})", micropost_path(@micropost.next) %></span>
             <% end %>
