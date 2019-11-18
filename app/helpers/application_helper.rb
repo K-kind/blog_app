@@ -9,13 +9,13 @@ module ApplicationHelper
     end
   end
 
-  def unique_categories(all_posts)
-    categories = []
-    all_posts.each do |post|
-      categories << post.category
-    end
-    categories.uniq!
-  end
+  # def unique_categories(all_posts)
+  #   categories = []
+  #   all_posts.each do |post|
+  #     categories << post.category
+  #   end
+  #   categories.uniq!
+  # end
 
   def admin_user?(user)
     if user == nil
@@ -25,5 +25,9 @@ module ApplicationHelper
     else
       return false
     end
+  end
+
+  def replies(comment)
+    Comment.where(replied_id: comment.id)
   end
 end

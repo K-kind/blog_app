@@ -10,6 +10,7 @@ class User < ApplicationRecord
                                    dependent:   :destroy
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
+  has_many :likes
   before_save :downcase_email
   before_create :create_activation_digest
   validates :name, presence:true, length: { maximum: 50 }
@@ -91,6 +92,10 @@ class User < ApplicationRecord
 
   def following?(other_user)
     following.include?(other_user)
+  end
+
+  def post_like(micropost)
+    likes.find_by(micropost_id: micropost.id)
   end
 
   private

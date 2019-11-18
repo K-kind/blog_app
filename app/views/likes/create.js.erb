@@ -1,0 +1,2 @@
+$("#like-unlike").html("<%= escape_javascript(render('microposts/unlike')) %>");
+$("#like-count").html("いいね: <%= @micropost.likes.count %>");

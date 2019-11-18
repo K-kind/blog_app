@@ -25,7 +25,7 @@ class MicropostsController < ApplicationController
   def show
     @micropost = Micropost.find(params[:id])
     impressionist(@micropost, nil, unique: [:session_hash])
-    @comments = @micropost.comments.paginate(page: params[:page], :per_page => 8)
+    @comments = @micropost.comments.where(replied_id: nil).paginate(page: params[:page], :per_page => 8)
     @comment = Comment.new
     aside_settings
   end

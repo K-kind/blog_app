@@ -5,12 +5,14 @@ class CommentsController < ApplicationController
   def create
     @comment = current_user.comments.build(comment_params)
     @comment.micropost_id = params[:micropost_id]
+    @comment.replied_id = params[:replied_id]
     if @comment.save
       flash[:success] = "Successfully commented."
       redirect_to @comment.micropost
     else
+      flash.now[:danger] = "Comment can't be blank"
       @micropost = Micropost.find(params[:micropost_id])
-      @comments = @micropost.comments.paginate(page: params[:page], :per_page => 8)
+      @comments = @micropost.comments.where(replied_id: nil).paginate(page: params[:page], :per_page => 8)
       impressionist(@micropost, nil, :unique => [:session_hash])
       aside_settings
       render 'microposts/show'
@@ -24,7 +26,8 @@ class CommentsController < ApplicationController
       flash[:success] = "Comment updated"
       redirect_to @micropost
     else
-      @comments = @micropost.comments.paginate(page: params[:page], :per_page => 8)
+      flash.now[:danger] = "Comment can't be blank"
+      @comments = @micropost.comments.where(replied_id: nil).paginate(page: params[:page], :per_page => 8)
       impressionist(@micropost, nil, :unique => [:session_hash])
       aside_settings
       render 'microposts/show'

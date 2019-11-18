@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'noreply@progress.monster'
+  default from: 'Progress <noreply@progress.monster>'
   layout 'mailer'
 end

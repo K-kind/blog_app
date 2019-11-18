@@ -1,5 +1,9 @@
 <li>
-  <%= attachment_image_tag user, :profile_image, size: "60x60", format: 'jpeg', class: "", fallback: "no_image.png" %>
+  <% if user.profile_image.attached? %>
+    <%= image_tag user.profile_image, height: "60" %>
+  <% else %>
+    <%= image_tag "no_image.png", size: '60x60' %>
+  <% end %>
   <%= link_to user.name, user %>
   <% if current_user.admin? && !current_user?(user) %>
     | <%= link_to "delete", user, method: :delete,

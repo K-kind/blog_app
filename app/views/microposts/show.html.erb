@@ -4,11 +4,27 @@
     <div class="row clearfix">
       <div class="col-xs-12 col-md-10 col-md-offset-1 post-show">
         <%= render 'microposts/micropost_content', micropost: @micropost %>
-        <% if current_user?(@micropost.user) %>
-          <span><%= link_to "Edit", edit_micropost_path(@micropost), class: "btn btn-success" %></span>
-          <span><%= link_to "Destroy", micropost_path(@micropost), method: :delete, data: { confirm: "You sure?"}, class: "btn btn-danger" %></span>
-        <% end %>
-        <p class="page-view">PV: <%= @micropost.impressions_count %></p>
+        <div class="clearfix">
+          <% if current_user?(@micropost.user) %>
+            <div class="show-edit-btns">
+              <span><%= link_to "Edit", edit_micropost_path(@micropost), class: "btn btn-success" %></span>
+              <span><%= link_to "Destroy", micropost_path(@micropost), method: :delete, data: { confirm: "You sure?"}, class: "btn btn-danger" %></span>
+            </div>
+          <% end %>
+          <div class="page-view">
+            <% if logged_in? %>
+              <div id="like-unlike">
+                <% if current_user.post_like(@micropost) %>
+                  <%= render 'microposts/unlike' %>
+                <% else %>
+                  <%= render 'microposts/like' %>
+                <% end %>
+              </div>
+            <% end %>
+            <span id="like-count">いいね: <%= @micropost.likes.count %></span>
+            <span>PV: <%= @micropost.impressions_count %></span>
+          </div>
+        </div>
         <div class="comment-section clearfix">
           <h4>Comments</h4>
           <% if @comments.any? %>
@@ -17,31 +33,77 @@
                 <div class="comment-list">
                   <div class="row">
                     <div class="col-md-2 comment-user">
-                      <% if c.user.profile_image.attached? %>
-                        <%= image_tag c.user.profile_image, height: "50" %>
-                      <% else %>
-                        <%= image_tag "no_image.png", size: '50x50' %>
+                      <%= link_to c.user do %>
+                        <% if c.user.profile_image.attached? %>
+                          <%= image_tag c.user.profile_image, height: "50" %>
+                        <% else %>
+                          <%= image_tag "no_image.png", size: '50x50' %>
+                        <% end %>
+                        <%= c.user.name %>
                       <% end %>
-                      <%= link_to c.user.name, c.user %>
                     </div>
                     <div class="col-md-10 comment-text">
                       <%= simple_format(c.content) %>
                       <p class="comment-id"><%= "ID:#{c.id} | #{c.created_at.strftime("%Y/%m/%d")}" %></p>
                     </div>
                   </div>
-                  <% if current_user?(c.user) || admin_user?(current_user) %>
+                  <% if replies(c).any? %>
+                    <div class="reply-drop-down"><a href="#" class="reply-drop"><%= replies(c).count %>件の返信<span class="glyphicon glyphicon-arrow-down"></span></a></div>
+                    <% replies(c).each do |reply| %>
+                      <div class="reply-content">
+                        <div class="row">
+                          <div class="col-md-2 comment-user">
+                            <%= link_to reply.user do %>
+                              <% if reply.user.profile_image.attached? %>
+                                <%= image_tag reply.user.profile_image, height: "40" %>
+                              <% else %>
+                                <%= image_tag "no_image.png", size: '40x40' %>
+                              <% end %>
+                              <%= reply.user.name %>
+                            <% end %>
+                          </div>
+                          <div class="col-md-10 comment-text">
+                            <%= simple_format(reply.content) %>
+                            <p class="comment-id"><%= "ID:#{reply.id} | #{c.created_at.strftime("%Y/%m/%d")}" %></p>
+                          </div>
+                        </div>
+                        <% if current_user?(reply.user) || admin_user?(current_user) %>
+                          <section class="edit-comment-form">
+                            <%= form_for [reply.micropost, reply] do |f| %>
+                              <%= f.text_area :content, class: "form-control", rows: 3 %>
+                              <%= f.submit 'Update comment', class: "blue-btn comment-btn edit-comment-btn" %>
+                            <% end %>
+                          </section>
+                          <div class="comment-btns">
+                            <a href="#" class="btn btn-success edit-comment">Edit</a>
+                            <%= link_to "Destroy", "/microposts/#{reply.micropost_id}/comments/#{reply.id}", method: :delete, data: { confirm: "You sure?"}, class: "btn btn-danger" %>
+                          </div>
+                        <% end %>
+                      </div>
+                    <% end %>
+                  <% end %>
+                  <section class="reply-comment-form">
+                    <%= form_for [@micropost, @comment] do |f| %>
+                      <div><%= hidden_field_tag :replied_id, c.id %></div>
+                      <%= f.text_area :content, class: "form-control", rows: 3 %>
+                      <%= f.submit 'Submit reply', class: "blue-btn comment-btn" %>
+                    <% end %>
+                  </section>
+                  <% if current_user?(c.user) %>
                     <section class="edit-comment-form">
                       <%= form_for [c.micropost, c] do |f| %>
-                        <%= render 'shared/error_messages', object: f.object %>
                         <%= f.text_area :content, class: "form-control", rows: 3 %>
-                        <%= f.submit 'Update comment', class: "blue-btn comment-btn" %>
+                        <%= f.submit 'Update comment', class: "blue-btn comment-btn edit-comment-btn" %>
                       <% end %>
                     </section>
-                    <div class="comment-btns">
-                      <span><a href="#" class="btn btn-success edit-comment">Edit</a></span>
-                      <span><%= link_to "Destroy", "/microposts/#{c.micropost_id}/comments/#{c.id}", method: :delete, data: { confirm: "You sure?"}, class: "btn btn-danger" %></span>
-                    </div>
                   <% end %>
+                  <div class="comment-btns clearfix">
+                  <% if current_user?(c.user) || admin_user?(current_user) %>
+                    <a href="#" class="btn btn-success edit-comment">Edit</a>
+                    <%= link_to "Destroy", "/microposts/#{c.micropost_id}/comments/#{c.id}", method: :delete, data: { confirm: "You sure?"}, class: "btn btn-danger" %>
+                  <% end %>
+                    <a href="#" class="blue-btn reply-btn">Reply</a>
+                  </div>
                 </div>
               <% end %>
               <%= will_paginate @comments %>
@@ -49,7 +111,6 @@
           <% end %>
           <% if logged_in? %>
             <%= form_for [@micropost, @comment] do |f| %>
-              <%= render 'shared/error_messages', object: f.object %>
               <%= f.text_area :content, class: "form-control", rows: 3, placeholder: "Comment here..." %>
               <%= f.submit 'Submit comment', class: "blue-btn comment-btn" %>
             <% end %>

@@ -1,0 +1,3 @@
+<%= link_to micropost_like_path(@micropost, current_user.post_like(@micropost)), method: :delete, remote: true, class: "heart-link" do %>
+  <span class="glyphicon glyphicon-heart red-heart"></span>
+<% end %>

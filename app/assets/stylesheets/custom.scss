@@ -267,11 +267,45 @@ footer {
 .show-this {
   text-align: right;
   padding-right: 10px;
+  font-size: 20px;
+}
+.show-edit-btns {
+  float: left;
 }
 .page-view {
-  text-align: right;
+  float: right;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  #like-unlike {
+    display: inline-block;
+  }
+  > span {
+    display: inline-block;
+    padding-left: 10px;
+  }
+  .pv-span {
+  }
 }
 
+.glyphicon-heart {
+  font-size: 25px;
+}
+.gray-heart {
+  color: gray;
+  &:hover {
+    color: lighten(gray, 10%);
+  }
+}
+.red-heart {
+  color: #ff0084;
+  &:hover {
+    color: darken(#ff0084, 10%);
+  }
+}
+.heart-link:hover {
+  text-decoration: none;
+}
 .next-prev {
   padding-bottom: 20px;
 }
@@ -336,13 +370,13 @@ footer {
 .comment-section {
   border-top: 2px solid silver;
   border-bottom: 2px solid silver;
-  margin: 20px 0;
+  margin: 15px 0 20px;
   padding: 20px 0;
   .comment-list {
     border: 2px solid silver;
     border-radius: 4px;
     margin-bottom: 8px;
-    padding: 10px 5px 5px;
+    padding: 10px 10px 5px;
     .comment-user {
       padding-right: 0;
       text-align: center;
@@ -360,13 +394,43 @@ footer {
         padding-bottom: 2px;
       }
     }
+    .reply-drop-down {
+      text-align: center;
+    }
+    .reply-content {
+      display: none;
+      border: 2px solid silver;
+      border-radius: 4px;
+      margin: 0 0 8px 20px;
+      padding: 6px;
+      .comment-id {
+        margin: 0;
+      }
+    }
+    .reply-btn {
+      border: 1px solid #428bca;
+      padding: 2px 10px;
+      margin: 0;
+      margin-left: 4px;
+    }
     .comment-text {
       .comment-id {
         text-align: right;
       }
     }
+    .edit-comment-btn {
+      background-color: #5cb85c;
+      &:hover {
+        background-color: darken($color:#5cb85c, $amount: 10%);
+      }
+    }
+    .reply-comment-form {
+      display: none;
+      margin-bottom: 10px;
+    }
     .edit-comment-form {
       display: none;
+      margin-bottom: 10px;
     }
     .dim {
       opacity: 0.3;
