@@ -1,0 +1,14 @@
+<div class="notification-box">
+  <% if notification.action == 'comment' %>
+    <% if notification.comment.replied_id %>
+      <p><%= link_to notification.sender.name, notification.sender %>さんから<%= link_to "コメント<id: #{notification.comment.replied_id}>", notification.micropost %>に返信がありました。</p>
+      <p class="notification-text"><%= notification.comment.content %></p>
+    <% else %>
+      <p><%= link_to notification.sender.name, notification.sender %>さんが<%= link_to "<#{notification.micropost.title}>", notification.micropost %>にコメントしました。</p>
+      <p class="notification-text"><%= notification.comment.content %></p>
+    <% end %>
+  <% else %>
+    <p class="notification-text"><%= link_to notification.sender.name, notification.sender %>さんが<%= link_to "<#{notification.micropost.title}>", notification.micropost %>にいいねしました。</p>
+  <% end %>
+  <p class="notification-date"><%= notification.created_at.strftime("%Y/%m/%d(%a)") %></p>
+</div>

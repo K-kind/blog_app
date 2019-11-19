@@ -6,6 +6,7 @@ class LikesController < ApplicationController
     like = current_user.likes.build
     like.micropost = @micropost
     like.save
+    @micropost.create_notification_like!(current_user)
     respond_to do |format|
       format.html { redirect_to @micropost }
       format.js

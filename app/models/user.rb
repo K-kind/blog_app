@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
   has_many :likes
+  has_many :active_notifications, class_name: 'Notification', foreign_key: 'sender_id', dependent: :destroy
+  has_many :passive_notifications, class_name: 'Notification', foreign_key: 'receiver_id', dependent: :destroy
   before_save :downcase_email
   before_create :create_activation_digest
   validates :name, presence:true, length: { maximum: 50 }

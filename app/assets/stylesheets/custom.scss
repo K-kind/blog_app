@@ -163,6 +163,20 @@ footer {
   margin-top: 20px;
 }
 
+.body {
+  padding-right: 0;
+}
+
+div.pagination {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  ul {
+    display: inline-block;
+  }
+}
+
 .user-info {
   margin-top: 5px;
   border-bottom: 2px solid gray;
@@ -283,8 +297,6 @@ footer {
   > span {
     display: inline-block;
     padding-left: 10px;
-  }
-  .pv-span {
   }
 }
 
@@ -494,6 +506,23 @@ footer {
 
 .signup, .edit-form {
   padding-bottom: 30px;
+}
+
+.notification-container {
+  margin-top: 20px;
+  .notification-box {
+    border: 2px solid silver;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding: 10px 10px 0 10px;
+    .notification-text {
+      margin-bottom: 5px;
+    }
+    .notification-date {
+      margin-bottom: 2px;
+      text-align: right;
+    }
+  }
 }
 
 @media screen and (max-width:990px){

@@ -1,0 +1,21 @@
+<% provide(:title, "Notifications") %>
+
+<div lass="row">
+  <div class="col-md-9 main">
+    <h3>Notifications</h3>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <% if @notifications.any? %>
+          <ul class="notification-container">
+            <%= render @notifications %>
+          </ul>
+        <% end %>
+        <%= will_paginate @notifications %>
+      </div>
+    </div>
+  </div>
+  <aside class="col-md-3">
+    <%= render 'shared/user_info' %>  
+    <%= render 'shared/aside_menu' %>  
+  </aside>
+</div>

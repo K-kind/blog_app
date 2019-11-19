@@ -98,11 +98,15 @@
                     </section>
                   <% end %>
                   <div class="comment-btns clearfix">
-                  <% if current_user?(c.user) || admin_user?(current_user) %>
-                    <a href="#" class="btn btn-success edit-comment">Edit</a>
-                    <%= link_to "Destroy", "/microposts/#{c.micropost_id}/comments/#{c.id}", method: :delete, data: { confirm: "You sure?"}, class: "btn btn-danger" %>
-                  <% end %>
-                    <a href="#" class="blue-btn reply-btn">Reply</a>
+                    <% if current_user?(c.user) || admin_user?(current_user) %>
+                      <a href="#" class="btn btn-success edit-comment">Edit</a>
+                      <%= link_to "Destroy", "/microposts/#{c.micropost_id}/comments/#{c.id}", method: :delete, data: { confirm: "You sure?"}, class: "btn btn-danger" %>
+                    <% end %>
+                    <% if logged_in? %>
+                      <a href="#" class="blue-btn reply-btn active-reply-btn">Reply</a>
+                    <% else %>
+                      <a class="blue-btn reply-btn not-active">Reply</a>
+                    <% end %>
                   </div>
                 </div>
               <% end %>

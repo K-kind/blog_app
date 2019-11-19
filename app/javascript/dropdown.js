@@ -10,7 +10,7 @@ $(document).ready(function(){
     return false;
   })
 
-  $('.reply-btn').click(function() {
+  $('.active-reply-btn').click(function() {
     $(this).toggleClass('dim');
     $(this).parent().prev(".reply-comment-form").slideToggle('fast');
     $(this).parent().prev().prev(".reply-comment-form").slideToggle('fast');

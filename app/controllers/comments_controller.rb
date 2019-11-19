@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
     @comment.micropost_id = params[:micropost_id]
     @comment.replied_id = params[:replied_id]
     if @comment.save
+      @comment.create_notification_comment!(current_user)
       flash[:success] = "Successfully commented."
       redirect_to @comment.micropost
     else
