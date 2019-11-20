@@ -164,7 +164,7 @@ footer {
 }
 
 .body {
-  padding-right: 0;
+  padding-right: 15px;
 }
 
 div.pagination {
@@ -254,8 +254,9 @@ div.pagination {
   border-right: 2px solid gray;
   min-height: 700px;
   padding-top: 10px;
-  h3 {
+  >h3 {
     font-size: 28px;
+    padding-left: 20px;
   }
 }
 .post-content {
