@@ -26,5 +26,9 @@ $(document).ready(function(){
   $('#top-btn').click(function() {
     $('html, body').animate({scrollTop:0});
   })
+
+  $('.show-image, .attachment, .large-image, .mordal-remove').click(function() {
+    $('#image-mordal').fadeToggle();
+  })
   
 });

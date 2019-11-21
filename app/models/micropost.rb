@@ -11,6 +11,7 @@ class Micropost < ApplicationRecord
   attachment :post_image
   has_rich_text :content
   is_impressionable counter_cache: true
+  has_one_attached :image
 
   def next
     user.microposts.where("id > ?", id).first
