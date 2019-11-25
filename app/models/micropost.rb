@@ -1,12 +1,12 @@
 class Micropost < ApplicationRecord
   belongs_to :user
   has_many :comments, dependent: :destroy
-  has_many :likes
+  has_many :likes, dependent: :destroy
   has_many :notifications, dependent: :destroy
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 10000 }
   validates :content_string, presence: true, length: { maximum: 10000 }
-  validates :title, presence: true, length: { maximum: 100 }
+  validates :title, presence: true, uniqueness: true, length: { maximum: 100 }
   validates :category, presence: true, length: { maximum: 20 }
   attachment :post_image
   has_rich_text :content

@@ -1,4 +1,4 @@
-$(document).ready(function(){
+document.addEventListener('turbolinks:load', function() {
   $('.toggler').click(function() {
     $(this).next().slideToggle('fast');
     return false;
@@ -30,5 +30,7 @@ $(document).ready(function(){
   $('.show-image, .attachment, .large-image, .mordal-remove').click(function() {
     $('#image-mordal').fadeToggle();
   })
-  
 });
+
+// $(document).ready(function(){
+// });

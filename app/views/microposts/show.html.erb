@@ -142,9 +142,9 @@
   </aside>
 </div>
 
-<div id="image-mordal">
-  <% if @micropost.image.attached? %>
+<% if @micropost.image.attached? %>
+  <div id="image-mordal">
     <span class="glyphicon glyphicon-remove mordal-remove"></span>
     <%= image_tag @micropost.image, class: "large-image" %>
-  <% end %>
-</div>
+  </div>
+<% end %>

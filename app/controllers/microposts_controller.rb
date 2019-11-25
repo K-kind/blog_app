@@ -1,5 +1,5 @@
 class MicropostsController < ApplicationController
-  before_action :logged_in_user, except: [:show, :index]
+  before_action :logged_in_user, except: [:show, :index, :categories, :search]
   before_action :correct_user, only: [:destroy, :edit, :update]
 
   def index
