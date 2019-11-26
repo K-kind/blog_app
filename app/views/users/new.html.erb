@@ -14,9 +14,18 @@
         <%= render'form' %>
         <p class="login-info">SNSログインを利用すると、メールアドレス確認の手間なく、簡単にログインしていただけます。アカウントごとにユーザーが別々に作られますので、ご注意ください。</p>
         <div class="social-buttons">
-          <%= link_to "Twitterでログイン", "/auth/twitter", class: "btn btn-twitter" %>
-          <%= link_to "Google+でログイン", "/auth/google_oauth2", class: "btn btn-google" %>
-          <%= link_to "Facebookでログイン", "/auth/facebook", class: "btn btn-facebook" %>
+          <%= link_to "/auth/twitter", class: "btn btn-twitter" do %>
+            <%= fa_icon("twitter lg") %>
+            Twitterでログイン
+          <% end %>
+          <%= link_to "/auth/google_oauth2", class: "btn btn-google" do %>
+            <%= fa_icon("google lg") %>
+            Googleでログイン
+          <% end %>
+          <%= link_to "/auth/facebook", class: "btn btn-facebook" do %>
+            <%= fa_icon("facebook-f lg") %>
+            Facebookでログイン
+          <% end %>
         </div>
       </div>
     </div>

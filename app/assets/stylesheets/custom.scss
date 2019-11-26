@@ -565,7 +565,9 @@ div.pagination {
 }
 
 .login-info {
-  margin: 25px 0 15px;
+  margin-top: 15px;
+  padding: 10px 0 15px;
+  border-top: 2px solid silver;
 }
 .social-buttons {
   margin-bottom: 24px;
@@ -575,6 +577,9 @@ div.pagination {
     color: white;
     &:hover {
       color: white;
+    }
+    i {
+      padding-right: 6px;
     }
   }
   .btn-twitter {
