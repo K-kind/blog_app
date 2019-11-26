@@ -5,9 +5,10 @@
 <div class="row">
   <div class="col-md-10 col-md-offset-1 user-edit">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2 edit-form">
+      <div class="col-md-8 col-md-offset-2 edit-form clearfix">
         <h2>Update your profile</h2>
         <%= render'form' %>
+        <%= link_to 'ユーザーを削除する', @user, method: :delete, class: 'btn btn-danger user-destroy-btn', data: { confirm: "#{@user.name}さんのアカウントを削除します。本当によろしいですか？"} %>
       </div>
     </div>
   </div>

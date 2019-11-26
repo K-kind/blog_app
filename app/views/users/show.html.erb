@@ -10,7 +10,7 @@
         </div>
         <% if @user == current_user %>
           <%= link_to edit_user_path(current_user) do %>
-            <span class="glyphicon glyphicon-wrench"></span>
+            <%= fa_icon("wrench lg") %>
             <span class="setting-link">User settings</span>
           <% end %>
         <% end %>
