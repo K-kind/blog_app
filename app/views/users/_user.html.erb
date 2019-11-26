@@ -1,12 +1,10 @@
 <li>
-  <% if user.profile_image.attached? %>
-    <%= image_tag user.profile_image, height: "60" %>
-  <% else %>
-    <%= image_tag "no_image.png", size: '60x60' %>
+  <%= link_to user do %>
+    <%= user.name %>
+    <%= user_image(user) %>
   <% end %>
-  <%= link_to user.name, user %>
   <% if current_user.admin? && !current_user?(user) %>
     | <%= link_to "delete", user, method: :delete,
-                                  data: { confirm: "You sure?"} %>
+                                  data: { confirm: "本当にユーザーを削除してよろしいですか？" } %>
   <% end %>
 </li>

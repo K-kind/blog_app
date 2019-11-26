@@ -22,7 +22,8 @@
           <%= f.submit "Log in", class: "btn btn-primary" %>
         <% end %>
         <p class="signup-now">New user? <%= link_to "Sign up now!", signup_path %></p>
-        <%= link_to "Twitterアカウントでログイン", "/auth/twitter" %>
+        <%= link_to "Twitterアカウントでログイン", "/auth/twitter", class: "btn btn-primary" %>
+        <%= link_to "Googleアカウントでログイン", "/auth/google_oauth2", class: "btn btn-danger" %>
       </div>
     </div>
   </div>

@@ -15,7 +15,7 @@ class User < ApplicationRecord
   has_many :passive_notifications, class_name: 'Notification', foreign_key: 'receiver_id', dependent: :destroy
   before_save :downcase_email, unless: :uid?
   before_create :create_activation_digest
-  validates :name, presence:true, unless: :uid?, length: { maximum: 50 }
+  validates :name, presence:true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
                     unless: :uid?,
