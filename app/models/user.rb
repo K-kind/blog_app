@@ -13,15 +13,16 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :active_notifications, class_name: 'Notification', foreign_key: 'sender_id', dependent: :destroy
   has_many :passive_notifications, class_name: 'Notification', foreign_key: 'receiver_id', dependent: :destroy
-  before_save :downcase_email
+  before_save :downcase_email, unless: :uid?
   before_create :create_activation_digest
-  validates :name, presence:true, length: { maximum: 50 }
+  validates :name, presence:true, unless: :uid?, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
+                    unless: :uid?,
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
   has_secure_password
-  validates :password, presence: true, length: { minimum: 6 }, allow_nil:true
+  validates :password, presence: true, unless: :uid?, length: { minimum: 6 }, allow_nil:true
   validates :introduction, length: { maximum: 400 }
   validates :profile_image, file_size: { in: 1.kilobytes..10.megabyte },
                       file_content_type: { allow: ['image/jpeg', 'image/png', 'image/gif'] }
@@ -98,6 +99,23 @@ class User < ApplicationRecord
 
   def post_like(micropost)
     likes.find_by(micropost_id: micropost.id)
+  end
+
+  def self.find_or_create_from_auth(auth)
+    provider = auth[:provider]
+    uid = auth[:uid]
+    name = auth[:info][:name]
+    social_image = auth[:info][:image]
+    introduction = auth[:info][:description] if provider == 'twitter'
+    
+    self.find_or_create_by(provider: provider, uid: uid) do |user|
+      user.name = name
+      user.social_image_url = social_image
+      user.introduction = introduction if user.provider == 'twitter'
+      if user.password == nil
+        user.password = user.password_confirmation = SecureRandom.hex(9)
+      end
+    end
   end
 
   private

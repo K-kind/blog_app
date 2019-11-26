@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_19_085539) do
+ActiveRecord::Schema.define(version: 2019_11_26_003332) do
 
   create_table "action_text_rich_texts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2019_11_19_085539) do
   end
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "content"
+    t.text "content", collation: "utf8mb4_general_ci"
     t.bigint "user_id", null: false
     t.bigint "micropost_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(version: 2019_11_19_085539) do
   end
 
   create_table "microposts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "content"
+    t.text "content", collation: "utf8mb4_general_ci"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -98,7 +98,7 @@ ActiveRecord::Schema.define(version: 2019_11_19_085539) do
     t.string "title"
     t.string "category"
     t.integer "impressions_count"
-    t.text "content_string"
+    t.text "content_string", collation: "utf8mb4_general_ci"
     t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_microposts_on_user_id"
   end
@@ -128,21 +128,24 @@ ActiveRecord::Schema.define(version: 2019_11_19_085539) do
     t.index ["follower_id"], name: "index_relationships_on_follower_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name", collation: "utf8_general_ci"
+    t.string "email", collation: "utf8_general_ci"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "password_digest"
-    t.string "profile_image_id"
-    t.string "remember_digest"
+    t.string "password_digest", collation: "utf8_general_ci"
+    t.string "profile_image_id", collation: "utf8_general_ci"
+    t.string "remember_digest", collation: "utf8_general_ci"
     t.boolean "admin", default: false
-    t.string "activation_digest"
+    t.string "activation_digest", collation: "utf8_general_ci"
     t.boolean "activated", default: false
     t.datetime "activated_at"
     t.datetime "reset_sent_at"
-    t.string "reset_digest"
+    t.string "reset_digest", collation: "utf8_general_ci"
     t.text "introduction"
+    t.string "uid", collation: "utf8_general_ci"
+    t.string "provider", collation: "utf8_general_ci"
+    t.string "social_image_url", collation: "utf8_general_ci"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

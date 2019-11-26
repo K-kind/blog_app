@@ -34,11 +34,7 @@
                   <div class="row">
                     <div class="col-md-2 comment-user">
                       <%= link_to c.user do %>
-                        <% if c.user.profile_image.attached? %>
-                          <%= image_tag c.user.profile_image, height: "50" %>
-                        <% else %>
-                          <%= image_tag "no_image.png", size: '50x50' %>
-                        <% end %>
+                        <%= user_image(c.user, height: "50") %>
                         <%= c.user.name %>
                       <% end %>
                     </div>
@@ -54,11 +50,7 @@
                         <div class="row">
                           <div class="col-md-2 comment-user">
                             <%= link_to reply.user do %>
-                              <% if reply.user.profile_image.attached? %>
-                                <%= image_tag reply.user.profile_image, height: "40" %>
-                              <% else %>
-                                <%= image_tag "no_image.png", size: '40x40' %>
-                              <% end %>
+                              <%= user_image(reply.user, height: "40") %>
                               <%= reply.user.name %>
                             <% end %>
                           </div>
@@ -67,7 +59,7 @@
                             <p class="comment-id"><%= "ID:#{reply.id} | #{c.created_at.strftime("%Y/%m/%d")}" %></p>
                           </div>
                         </div>
-                        <% if current_user?(reply.user) || admin_user?(current_user) %>
+                        <% if current_user?(reply.user) || current_user&.admin? %>
                           <section class="edit-comment-form">
                             <%= form_for [reply.micropost, reply] do |f| %>
                               <%= f.text_area :content, class: "form-control", rows: 3 %>
@@ -98,7 +90,7 @@
                     </section>
                   <% end %>
                   <div class="comment-btns clearfix">
-                    <% if current_user?(c.user) || admin_user?(current_user) %>
+                    <% if current_user?(c.user) || current_user&.admin? %>
                       <a href="#" class="btn btn-success edit-comment">Edit</a>
                       <%= link_to "Destroy", "/microposts/#{c.micropost_id}/comments/#{c.id}", method: :delete, data: { confirm: "You sure?"}, class: "btn btn-danger" %>
                     <% end %>

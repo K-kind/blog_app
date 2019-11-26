@@ -4,11 +4,7 @@
     <h4><%= @first_user.name %></h4>
     <div class="profile clearfix">
       <%= link_to @first_user do %>
-        <% if @first_user.profile_image.attached? %>
-          <%= image_tag @first_user.profile_image, height: "70" %>
-        <% else %>
-          <%= image_tag "no_image.png", size: '70x70' %>
-        <% end %>
+        <%= user_image(@first_user, height: "70") %>
       <% end %>
     </div>
     <%= simple_format(@first_user.introduction) %>

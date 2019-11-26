@@ -17,17 +17,17 @@ module ApplicationHelper
   #   categories.uniq!
   # end
 
-  def admin_user?(user)
-    if user == nil
-      return false
-    elsif user.admin?
-      return true
-    else
-      return false
-    end
-  end
-
   def replies(comment)
     Comment.where(replied_id: comment.id)
+  end
+
+  def user_image(user, options = { height: "60" })
+    if user.profile_image.attached?
+      image_tag user.profile_image, options
+    elsif user.social_image_url
+      image_tag user.social_image_url, options
+    else
+      image_tag "no_image.png", options
+    end
   end
 end
