@@ -12,9 +12,12 @@
           ※メールアドレスに送られるリンクをクリックしていただくと登録完了してログインできるようになります。
         </p>
         <%= render'form' %>
-        <p>SNSログインを利用すると、メールアドレス確認の手間なく、簡単にログインしていただけます。</p>
-        <%= link_to "Twitterアカウントでログイン", "/auth/twitter", class: "btn btn-primary" %>
-        <%= link_to "Googleアカウントでログイン", "/auth/google_oauth2", class: "btn btn-danger" %>
+        <p class="login-info">SNSログインを利用すると、メールアドレス確認の手間なく、簡単にログインしていただけます。アカウントごとにユーザーが別々に作られますので、ご注意ください。</p>
+        <div class="social-buttons">
+          <%= link_to "Twitterでログイン", "/auth/twitter", class: "btn btn-twitter" %>
+          <%= link_to "Google+でログイン", "/auth/google_oauth2", class: "btn btn-google" %>
+          <%= link_to "Facebookでログイン", "/auth/facebook", class: "btn btn-facebook" %>
+        </div>
       </div>
     </div>
   </div>

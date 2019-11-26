@@ -509,7 +509,7 @@ div.pagination {
 }
 
 .signup, .edit-form {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .notification-container {
@@ -562,6 +562,39 @@ div.pagination {
 
 .large-image {
   cursor: pointer;
+}
+
+.login-info {
+  margin: 25px 0 15px;
+}
+.social-buttons {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  a {
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
+  .btn-twitter {
+    background-color: #00ACEE;
+    &:hover {
+      background-color: darken(#00ACEE, 10%);
+    }
+  }
+  .btn-google {
+    background-color: #db4a39;
+    &:hover {
+      background-color: darken(#DB4A39, 10%);
+    }
+  }
+  .btn-facebook {
+    background-color: #39569C;
+    &:hover {
+      background-color: darken(#39569C, 10%);
+    }
+  }
 }
 
 @media screen and (max-width:990px){

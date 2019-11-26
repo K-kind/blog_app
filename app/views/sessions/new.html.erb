@@ -22,8 +22,12 @@
           <%= f.submit "Log in", class: "btn btn-primary" %>
         <% end %>
         <p class="signup-now">New user? <%= link_to "Sign up now!", signup_path %></p>
-        <%= link_to "Twitterアカウントでログイン", "/auth/twitter", class: "btn btn-primary" %>
-        <%= link_to "Googleアカウントでログイン", "/auth/google_oauth2", class: "btn btn-danger" %>
+        <p class="mt-3">アカウントごとにユーザーが別々に作られますので、ご注意ください。</p>
+        <div class="social-buttons">
+          <%= link_to "Twitterでログイン", "/auth/twitter", class: "btn btn-twitter" %>
+          <%= link_to "Google+でログイン", "/auth/google_oauth2", class: "btn btn-google" %>
+          <%= link_to "Facebookでログイン", "/auth/facebook", class: "btn btn-facebook" %>
+        </div>
       </div>
     </div>
   </div>
