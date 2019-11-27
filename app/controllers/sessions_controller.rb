@@ -36,4 +36,9 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to root_url
   end
+
+  def auth_failure
+    flash[:warning] = 'SNSログインに失敗しました。'
+    redirect_to login_url
+  end
 end

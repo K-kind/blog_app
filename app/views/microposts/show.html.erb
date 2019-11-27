@@ -7,8 +7,8 @@
         <div class="clearfix">
           <% if current_user?(@micropost.user) %>
             <div class="show-edit-btns">
-              <span><%= link_to "Edit", edit_micropost_path(@micropost), class: "btn btn-success" %></span>
-              <span><%= link_to "Destroy", micropost_path(@micropost), method: :delete, data: { confirm: "You sure?"}, class: "btn btn-danger" %></span>
+              <span><%= link_to "編集", edit_micropost_path(@micropost), class: "btn btn-success" %></span>
+              <span><%= link_to "削除", micropost_path(@micropost), method: :delete, data: { confirm: "本当に削除しますか？"}, class: "btn btn-danger" %></span>
             </div>
           <% end %>
           <div class="page-view">
@@ -63,12 +63,12 @@
                           <section class="edit-comment-form">
                             <%= form_for [reply.micropost, reply] do |f| %>
                               <%= f.text_area :content, class: "form-control", rows: 3 %>
-                              <%= f.submit 'Update comment', class: "blue-btn comment-btn edit-comment-btn" %>
+                              <%= f.submit 'コメントを編集', class: "blue-btn comment-btn edit-comment-btn" %>
                             <% end %>
                           </section>
                           <div class="comment-btns">
-                            <a href="#" class="btn btn-success edit-comment">Edit</a>
-                            <%= link_to "Destroy", "/microposts/#{reply.micropost_id}/comments/#{reply.id}", method: :delete, data: { confirm: "You sure?"}, class: "btn btn-danger" %>
+                            <a href="#" class="btn btn-success edit-comment">編集</a>
+                            <%= link_to "削除", "/microposts/#{reply.micropost_id}/comments/#{reply.id}", method: :delete, data: { confirm: "本当に削除しますか？"}, class: "btn btn-danger" %>
                           </div>
                         <% end %>
                       </div>
@@ -78,26 +78,26 @@
                     <%= form_for [@micropost, @comment] do |f| %>
                       <div><%= hidden_field_tag :replied_id, c.id %></div>
                       <%= f.text_area :content, class: "form-control", rows: 3 %>
-                      <%= f.submit 'Submit reply', class: "blue-btn comment-btn" %>
+                      <%= f.submit '返信を送る', class: "blue-btn comment-btn" %>
                     <% end %>
                   </section>
                   <% if current_user?(c.user) %>
                     <section class="edit-comment-form">
                       <%= form_for [c.micropost, c] do |f| %>
                         <%= f.text_area :content, class: "form-control", rows: 3 %>
-                        <%= f.submit 'Update comment', class: "blue-btn comment-btn edit-comment-btn" %>
+                        <%= f.submit 'コメントを編集', class: "blue-btn comment-btn edit-comment-btn" %>
                       <% end %>
                     </section>
                   <% end %>
                   <div class="comment-btns clearfix">
                     <% if current_user?(c.user) || current_user&.admin? %>
-                      <a href="#" class="btn btn-success edit-comment">Edit</a>
-                      <%= link_to "Destroy", "/microposts/#{c.micropost_id}/comments/#{c.id}", method: :delete, data: { confirm: "You sure?"}, class: "btn btn-danger" %>
+                      <a href="#" class="btn btn-success edit-comment">編集</a>
+                      <%= link_to "削除", "/microposts/#{c.micropost_id}/comments/#{c.id}", method: :delete, data: { confirm: "本当に削除しますか？"}, class: "btn btn-danger" %>
                     <% end %>
                     <% if logged_in? %>
-                      <a href="#" class="blue-btn reply-btn active-reply-btn">Reply</a>
+                      <a href="#" class="blue-btn reply-btn active-reply-btn">返信</a>
                     <% else %>
-                      <a class="blue-btn reply-btn not-active">Reply</a>
+                      <a class="blue-btn reply-btn not-active">返信</a>
                     <% end %>
                   </div>
                 </div>
@@ -107,12 +107,12 @@
           <% end %>
           <% if logged_in? %>
             <%= form_for [@micropost, @comment] do |f| %>
-              <%= f.text_area :content, class: "form-control", rows: 3, placeholder: "Comment here..." %>
-              <%= f.submit 'Submit comment', class: "blue-btn comment-btn" %>
+              <%= f.text_area :content, class: "form-control", rows: 3, placeholder: "コメントする..." %>
+              <%= f.submit 'コメントを送信', class: "blue-btn comment-btn" %>
             <% end %>
           <% else %>
             <textarea class="form-control" rows="3" placeholder="コメントにはログインが必要です"></textarea>
-            <input type="submit" value="Submit comment" class="blue-btn comment-btn not-active">
+            <input type="submit" value="コメントを送信" class="blue-btn comment-btn not-active">
           <% end %>
         </div>
         <div>

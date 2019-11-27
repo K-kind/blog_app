@@ -18,12 +18,12 @@
     <ul>
       <li>
         <a href="#" class="toggler">
-          Archives <b class="caret"></b>
+          月別アーカイブ <b class="caret"></b>
         </a>
         <ul class="down-menu">
           <li>
             <a href="#" class="toggler">
-              2019/11 <b class="caret"></b>
+              2019年11月 <b class="caret"></b>
             </a>
             <ul class="down-menu">
               <% @nov_posts.each do |post| %>
@@ -34,7 +34,7 @@
           <% if @dec_posts.any? %>
           <li>
             <a href="#" class="toggler">
-              2019/12 <b class="caret"></b>
+              2019年12月 <b class="caret"></b>
             </a>
             <ul class="down-menu">
               <% @dec_posts.each do |post| %>
@@ -46,7 +46,7 @@
           <% if @jan_posts.any? %>
           <li>
             <a href="#" class="toggler">
-              2020/01 <b class="caret"></b>
+              2020年1月 <b class="caret"></b>
             </a>
             <ul class="down-menu">
               <% @jan_posts.each do |post| %>
@@ -58,7 +58,7 @@
           <% if @feb_posts.any? %>
           <li>
             <a href="#" class="toggler">
-              2020/02 <b class="caret"></b>
+              2020年2月 <b class="caret"></b>
             </a>
             <ul class="down-menu">
               <% @feb_posts.each do |post| %>
@@ -71,7 +71,7 @@
       </li>
       <li>
         <a href="#" class="toggler">
-          Categories <b class="caret"></b>
+          カテゴリー <b class="caret"></b>
         </a>
         <ul class="down-menu">
           <% @categories.each do |category| %>
@@ -79,7 +79,7 @@
           <% end %>
         </ul>
       </li>
-      <li><%= link_to "All posts", microposts_path %></li>
+      <li><%= link_to "投稿一覧", microposts_path %></li>
     </ul>
   </div>
 </div>

@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_003332) do
 
   create_table "action_text_rich_texts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.text "body", size: :long
+    t.text "body", size: :long, collation: "utf8mb4_general_ci"
     t.string "record_type", null: false
     t.bigint "record_id", null: false
     t.datetime "created_at", precision: 6, null: false

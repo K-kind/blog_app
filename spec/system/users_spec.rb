@@ -32,13 +32,13 @@ describe 'ユーザー関連機能', type: :system do
     context '有効な情報' do
       before do
         @user_count = User.count
-        @user = assigns(:user)
         visit signup_path
         fill_in 'user_name', with: 'Example User'
         fill_in 'user_email', with: 'user@example.com'
         fill_in 'user_password', with: 'password'
         fill_in 'user_password_confirmation', with: 'password'
         click_button 'commit'
+        @user = User.find_by(email: 'user@example.com')
       end
 
       it 'メール発送通知が表示される' do
@@ -57,14 +57,18 @@ describe 'ユーザー関連機能', type: :system do
         expect(@user.activated?).to be_falsey
       end
 
-      it '有効化していないユーザーはログインできない' do
+      it '有効化していないユーザーがログインを試みるとメッセージが表示される' do
         visit login_path
         fill_in 'session_email', with: 'user@example.com'
         fill_in 'session_password', with: 'password'
         click_button 'commit'
-        expect(current_user).to be_falsey
+        expect(page).to have_selector 'div.alert-warning'
       end
 
+      it '無効なトークンを含む有効化URLでは有効化はできない' do
+        visit edit_account_activation_path("invalid token", email: @user.email)
+        expect(page).to have_selector 'div.alert-danger'
+      end
     end
   end
 end
