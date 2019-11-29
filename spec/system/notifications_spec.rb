@@ -54,21 +54,33 @@ RSpec.describe '通知機能', type: :system, js: true do
       it '通知の内容が正しいこと' do
         find('a[href="/notifications"]').click
         expect(page).to have_content( "#{second_user.name}さんが<#{first_post.title}>にいいねしました")
+        expect(page).to have_content('first_userのコメントへの返信')
         expect(page).to have_content( "#{second_user.name}さんが<#{first_post.title}>にコメントしました")
-        expect(page).to have_content("#{second_user.name}さんがコメント<id: ", count: 2)
-        # expect(page).to have_content("#{second_user.name}さんがコメント<id: #{first_comment.id}>に返信しました")
-        # expect(page).to have_content("#{second_user.name}さんがコメント<id: 2>に返信しました")
+        expect(page).to have_content('second_user自身のコメントへの返信')
       end
 
       context '一般ユーザーへの通知' do
         before do
           visit micropost_path first_post
+          # second_userのコメントに返信
+          within page.all('.comment-list')[1] do
+            find('a.reply-btn').click
+            fill_in 'comment_content', with: 'second_userのコメントへの返信'
+            find('.comment-btn').click
+          end
+          # second_userにログイン
+          find('a[href="/logout"]').click
+          visit login_path
+          fill_in 'session_email', with: second_user.email
+          fill_in 'session_password', with: second_user.password
+          click_button 'commit'
         end
-        # second_userのコメントに返信
-        within page.all('.comment-list')[1] do
-          find('a.reply-btn').click
-          fill_in 'comment_content', with: 'second_userのコメントへの返信'
-          find('.comment-btn').click
+        it '一般ユーザーに通知が来ていること' do
+          within 'header' do
+            expect(page).to have_selector 'span', text: '1'
+          end
+          find('a[href="/notifications"]').click
+          expect(page).to have_content('second_userのコメントへの返信')
         end
       end
     end

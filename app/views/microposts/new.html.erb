@@ -1,6 +1,7 @@
+<% provide :title, "新規投稿" %>
 <div class="row">
   <div class="col-md-8 col-md-offset-2 new-post">
-    <h3>New post</h3>
+    <h3>新規投稿</h3>
     <%= form_for(@micropost) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
       <div class="field">
@@ -14,8 +15,13 @@
         <%= f.file_field :image %>
         <%= f.label :category %>
         <%= f.text_field :category, class: "form-control" %>
+
+        <%= f.label :draft, class: "checkbox-inline" do %>
+          <%= f.check_box :draft, id: "draft-checkbox" %>
+          <span>下書き</span>
+        <% end %>
       </div>
-      <%= f.submit "Post", class: "btn btn-primary" %>
+      <%= f.submit "記事を投稿", class: "btn btn-primary", id: "post-submit-btn" %>
     <% end %>
   </div>
 </div>

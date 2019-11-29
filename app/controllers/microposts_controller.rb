@@ -1,9 +1,10 @@
 class MicropostsController < ApplicationController
   before_action :logged_in_user, except: [:show, :index, :categories, :search]
   before_action :correct_user, only: [:destroy, :edit, :update]
+  before_action :admin_user, only: [:drafts]
 
   def index
-    @microposts = Micropost.paginate(page: params[:page]).order(id: "DESC")
+    @microposts = Micropost.published.paginate(page: params[:page]).order(id: "DESC")
     aside_settings
   end
 
@@ -15,15 +16,22 @@ class MicropostsController < ApplicationController
     @micropost = current_user.microposts.build(micropost_params)
     @micropost.content_string = @micropost.content.to_s
     if @micropost.save
-      flash[:success] = "Micropost created!"
-      redirect_to @micropost
+      case params[:micropost][:draft]
+      when '0'
+        flash[:success] = "投稿が完了しました"
+        redirect_to @micropost
+      when '1'
+        @micropost.update_attributes(draft: true)
+        flash[:success] = "下書きが保存されました"
+        redirect_to drafts_microposts_url
+      end
     else
       render 'new'
     end
   end
 
   def show
-    @micropost = Micropost.find(params[:id])
+    @micropost = Micropost.published.find(params[:id])
     impressionist(@micropost, nil, unique: [:session_hash])
     @comments = @micropost.comments.where(replied_id: nil).paginate(page: params[:page], :per_page => 8)
     @comment = Comment.new
@@ -32,7 +40,7 @@ class MicropostsController < ApplicationController
 
   def destroy
     @micropost.destroy
-    flash[:success] = "Micropost deleted"
+    flash[:success] = "投稿が削除されました"
     redirect_to root_url
   end
 
@@ -41,10 +49,19 @@ class MicropostsController < ApplicationController
 
   def update
     if @micropost.update_attributes(micropost_params)
-      @micropost.content_string = @micropost.content.to_s
-      @micropost.save
-      flash[:success] = "Post updated"
-      redirect_to @micropost
+      @micropost.update_attributes(content_string: @micropost.content.to_s)
+      case params[:micropost][:draft]
+      when nil
+        flash[:success] = "投稿が更新されました"
+        redirect_to @micropost
+      when '0'
+        @micropost.update_attributes(draft: false, created_at: Time.zone.now)
+        flash[:success] = "投稿が完了しました"
+        redirect_to @micropost
+      when '1'
+        flash[:success] = "下書きが保存されました"
+        redirect_to drafts_microposts_url
+      end
     else
       render 'edit'
     end
@@ -52,13 +69,18 @@ class MicropostsController < ApplicationController
 
   def categories
     @category = params[:category]
-    @microposts = Micropost.where(category: @category).paginate(page: params[:page]).order(id: "DESC")
+    @microposts = Micropost.published.where(category: @category).paginate(page: params[:page]).order(id: "DESC")
     aside_settings
   end
 
   def search
     @search = params[:search]
-    @microposts = Micropost.search(@search).paginate(page: params[:page]).order(id: "DESC")
+    @microposts = Micropost.published.search(@search).paginate(page: params[:page]).order(id: "DESC")
+    aside_settings
+  end
+
+  def drafts
+    @draft_posts = Micropost.where(draft: true).paginate(page: params[:page])
     aside_settings
   end
 

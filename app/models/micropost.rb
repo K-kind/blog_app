@@ -1,4 +1,5 @@
 class Micropost < ApplicationRecord
+  scope :published,  -> { where(draft: false) }
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
@@ -8,21 +9,21 @@ class Micropost < ApplicationRecord
   validates :content_string, presence: true, length: { maximum: 10000 }
   validates :title, presence: true, uniqueness: true, length: { maximum: 100 }
   validates :category, presence: true, length: { maximum: 20 }
-  attachment :post_image
+  # attachment :post_image
   has_rich_text :content
-  is_impressionable counter_cache: true
   has_one_attached :image
+  is_impressionable counter_cache: true
 
   def next
-    user.microposts.where("id > ?", id).first
+    user.microposts.published.where("id > ?", id).first
   end
 
   def prev
-    user.microposts.where("id < ?", id).last
+    user.microposts.published.where("id < ?", id).last
   end
 
   def self.search(search)
-    return Micropost.all unless search
+    return Micropost.published unless search
     Micropost.where(['title LIKE ? OR content_string LIKE ?', "%#{search}%", "%#{search}%"])
   end
 

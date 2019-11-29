@@ -1,0 +1,33 @@
+<% provide :title, "下書き一覧" %>
+<div class="row">
+  <div class="col-md-9 main">
+    <h3>下書き一覧</h3>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th class="title-col">Title</th>
+              <th>Category</th>
+              <th>Posted at</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @draft_posts.each do |micropost| %>
+              <tr>
+                <td class="title-col"><%= link_to micropost.title, edit_micropost_path(micropost), class: "table-link" %></td>
+                <td><%= link_to micropost.category, edit_micropost_path(micropost), class: "table-link" %></td>
+                <td><%= link_to micropost.created_at.strftime("%Y/%m/%d(%a)"), edit_micropost_path(micropost), class: "table-link" %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= will_paginate @draft_posts %>
+      </div>
+    </div>
+  </div>
+  <aside class="col-md-3">
+    <%= render 'shared/user_info' %>  
+    <%= render 'shared/aside_menu' %>  
+  </aside>
+</div>

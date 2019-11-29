@@ -1,16 +1,29 @@
-<%= form_for(@micropost) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: "form-control" %>
+<% provide :title, "記事編集" %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 new-post">
+    <h3>記事編集</h3>
+    <%= form_for(@micropost) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <div class="field">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: "form-control" %>
 
-    <%= f.rich_text_area :content %>
+        <%= f.rich_text_area :content %>
 
-    <%= f.label :image %>
-    <%= f.file_field :image %>
-    
-    <%= f.label :category %>
-    <%= f.text_field :category, class: "form-control" %>
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+        
+        <%= f.label :category %>
+        <%= f.text_field :category, class: "form-control" %>
+
+        <% if @micropost.draft %>
+          <%= f.label :draft, class: "checkbox-inline" do %>
+            <%= f.check_box :draft, id: "draft-checkbox" %>
+            <span>下書き</span>
+          <% end %>
+        <% end %>
+      </div>
+      <%= f.submit "記事を更新", class: "btn btn-primary", id: "post-submit-btn" %>
+    <% end %>
   </div>
-  <%= f.submit "Update", class: "btn btn-primary" %>
-<% end %>
+</div>

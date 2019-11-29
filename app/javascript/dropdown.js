@@ -30,6 +30,20 @@ document.addEventListener('turbolinks:load', function() {
   $('.show-image, .attachment, .large-image, .mordal-remove').click(function() {
     $('#image-mordal').fadeToggle();
   })
+
+  const originalButtonValue = $('#post-submit-btn').val();
+  if ($('#draft-checkbox').prop('checked') === true) {
+    $('#post-submit-btn').addClass('orange-btn').val('下書きを保存');
+  }
+  $('#draft-checkbox').change(function() {
+    $('#post-submit-btn').toggleClass('orange-btn');
+    if ($('#draft-checkbox').prop('checked') === true) {
+      $('#post-submit-btn').addClass('orange-btn').val('下書きを保存');
+    }
+    if ($('#draft-checkbox').prop('checked') === false) {
+      $('#post-submit-btn').removeClass('orange-btn').val(originalButtonValue);
+    }
+  });
 });
 
 // $(document).ready(function(){

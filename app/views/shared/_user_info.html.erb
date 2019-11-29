@@ -1,13 +1,13 @@
-<% if @first_user %>
+<% if @admin_user %>
   <section class="user-info">
     <%# <h4>Blog owner</h4> %>
-    <h4><%= @first_user.name %></h4>
+    <h4><%= @admin_user.name %></h4>
     <div class="profile clearfix">
-      <%= link_to @first_user do %>
-        <%= user_image(@first_user, height: "70") %>
+      <%= link_to @admin_user do %>
+        <%= user_image(@admin_user, height: "70") %>
       <% end %>
     </div>
-    <%= simple_format(@first_user.introduction) %>
+    <%= simple_format(@admin_user.introduction) %>
     <p class="to-profile"><%= link_to "About this blog", about_path %></p>
   </section>
 <% end %>

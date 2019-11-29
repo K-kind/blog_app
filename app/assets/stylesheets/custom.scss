@@ -606,6 +606,14 @@ div.pagination {
   }
 }
 
+.checkbox-inline {
+  margin-bottom: 10px;
+}
+.orange-btn {
+  background-color: orange;
+  border-color: orange;
+}
+
 @media screen and (max-width:990px){
   .main {
     border-right: none;

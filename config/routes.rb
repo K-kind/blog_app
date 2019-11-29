@@ -11,20 +11,21 @@ Rails.application.routes.draw do
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: 'sessions#auth_failure'
 
-  resources :users do
-    member do
-      get :following, :followers
-    end
-  end
+  resources :users
+  # resources :users do
+  #   member do
+  #     get :following, :followers
+  #   end
+  # end
+  # resources :relationships,       only: [:create, :destroy]
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :microposts do
     resources :comments,          only: [:create, :update, :destroy]
     resources :likes,             only: [:create, :destroy]
     collection do
-      get :categories, :search
+      get :categories, :search, :drafts
     end
   end
-  resources :relationships,       only: [:create, :destroy]
   resources :notifications,       only: :index
 end
