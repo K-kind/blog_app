@@ -80,7 +80,9 @@
         </ul>
       </li>
       <li><%= link_to "投稿一覧", microposts_path %></li>
-      <li><%= link_to "下書き一覧", drafts_microposts_path %></li>
+      <% if current_user&.admin? %>
+        <li><%= link_to "下書き一覧", drafts_microposts_path %></li>
+      <% end %>
     </ul>
   </div>
 </div>
